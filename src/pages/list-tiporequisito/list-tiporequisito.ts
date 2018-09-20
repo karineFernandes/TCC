@@ -35,9 +35,9 @@ public tiporequisito:TipoRequisito[];
 
   novoRequisito(){ }
 
-  selecionaRequisito(requisito){
-    let cn = parseInt(requisito);
-    this.navCtrl.push(EditTiporequisitoPage,{codtipreq:cn});
+  selecionaRequisito(cod,nome){
+    let cn = parseInt(cod);
+    this.navCtrl.push(EditTiporequisitoPage,{codtipreq:cn,nomtipreq:nome});
   }
 
 }

@@ -13,7 +13,7 @@
   <!--Toda vez que encontrar um atributo criar botao 
     com o nome do atributo -->
   <button ion-item *ngFor="let tiporeq of tiporequisito"
-  (click)="selecionaRequisito(tiporeq.codtipreq)"> {{tiporeq.nomtipreq}}
+  (click)="selecionaRequisito(tiporeq.codtipreq,tiporeq.nomtipreq)"> {{tiporeq.nomtipreq}}
   </button>
 </ion-list>
 
