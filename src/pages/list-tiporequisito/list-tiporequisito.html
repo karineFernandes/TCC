@@ -1,0 +1,36 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Lista de Requisitos</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+ 
+<ion-content padding>
+<ion-list>
+  <!--Toda vez que encontrar um atributo criar botao 
+    com o nome do atributo -->
+  <button ion-item *ngFor="let tiporeq of tiporequisito"
+  (click)="selecionaRequisito(tiporeq.codtipreq)"> {{tiporeq.nomtipreq}}
+  </button>
+</ion-list>
+
+<!--Criacao de botao para add novos requisitos-->
+<div id ="mais"><button ion-button round color="primary" 
+  (click)="novoRequisito()">
+  <ion-icon name="add"></ion-icon>
+</button> 
+</div>
+</ion-content>
+
+<!--
+<ion-content padding>
+  <ion-list>
+    <ion-item *ngFor="let tiporeq of tiporequisito">
+      <h2>{{tiporeq.codtipreq}}</h2>
+      <div>{{tiporeq.nomtipreq}}</div>
+    </ion-item>
+  </ion-list>
+  </ion-content>--> 
