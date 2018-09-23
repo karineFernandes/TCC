@@ -27,7 +27,12 @@ export class EditTiporequisitoPage {
   }
 
   alterar(){
-  
+    this._http.put('/api/GenericRestService/rest/querytojson/LISTTIPOREQUISITO/codReq',{})
+    .subscribe(
+      (tiporequisito)=>{
+        console.log(tiporequisito);
+      }
+    );
     
   }
 
