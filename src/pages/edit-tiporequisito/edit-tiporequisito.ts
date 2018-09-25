@@ -27,28 +27,51 @@ export class EditTiporequisitoPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad EditTiporequisitoPage');
   }
-
-  alterar(){
+ 
+  alterar(nomreqlink){
+    let aux = '';
+    console.log("entrei aqui 1");
+    
     let requisito = {
       "codigo": this.codReq,
-      "nome": this.nomeReq
+      "nome": nomreqlink
     };
 
-    this._http.put('/api/GenericRestService/rest/querytojson/LISTTIPOREQUISITO/codReq',requisito)
+   //Modificar a variavel nomeReq para ser inserida no link
+   //Tirar caracteres especiais 
+     nomreqlink = nomreqlink.replace(" ","");
+
+    for (let i = 0; i < nomreqlink.length;i++ ){
+      console.log("vetor:"+nomreqlink.charAt(i));
+      if(nomreqlink.charAt(i) == 'ç' ){
+        console.log("vetor:"+nomreqlink.charAt(i));
+        aux = 'c';
+        nomreqlink = nomreqlink.substring(0,i--)+aux+nomreqlink.substring(i++,nomreqlink.length);
+        console.log("2nomreq:"+nomreqlink);
+      }
+        else  if(nomreqlink.charAt(i) == 'ã' || nomreqlink.charAt(i)== 'ã' || nomreqlink.charAt(i) == 'á'|| nomreqlink.charAt(i) == 'Á'){
+          aux = 'a';
+          nomreqlink = nomreqlink.substring(0,--i) +aux+nomreqlink.substring(i++,nomreqlink.length);
+          console.log("3nomreq:"+nomreqlink);
+        }
+    }
+   
+    console.log("nomreq:"+nomreqlink);
+
+    this._http.put('/api/GenericRestService/rest/querytojson/UPDTIPOREQUISITO/'+nomreqlink+"&"+this.codReq+"&",requisito)
     .subscribe(
       (tiporequisito)=>{
+        console.log("entrei aqui 3");
         console.log(tiporequisito);
+        
       }
     );
     
   }
 
   excluir(){
-    let requisito = {
-      "codigo": this.codReq,
-      "nome": this.nomeReq
-    };
-    this._http.delete('/api/GenericRestService/rest/querytojson/LISTTIPOREQUISITO/'+ requisito)
+  
+    this._http.delete('/api/GenericRestService/rest/querytojson/LISTTIPOREQUISITO/')
     .subscribe(
       (tiporequisito)=>{
         console.log(tiporequisito);
@@ -57,3 +80,7 @@ export class EditTiporequisitoPage {
 
   }
 }
+
+// inserir novo elemento > http://camerascasas.no-ip.info:8085/GenericRestService/rest/querytojson/INSTIPOREQUISITO/TIPOREQUISITOXXXX&
+// alterar elemento > http://camerascasas.no-ip.info:8085/GenericRestService/rest/querytojson/UPDTIPOREQUISITO/
+// deletar elemento > http://camerascasas.no-ip.info:8085/GenericRestService/rest/querytojson/INSTIPOREQUISITOt/
