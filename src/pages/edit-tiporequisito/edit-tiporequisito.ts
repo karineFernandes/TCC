@@ -42,16 +42,19 @@ export class EditTiporequisitoPage {
      nomreqlink = nomreqlink.replace(" ","");
 
     for (let i = 0; i < nomreqlink.length;i++ ){
-      console.log("vetor:"+nomreqlink.charAt(i));
+      let j = 0;
       if(nomreqlink.charAt(i) == 'ç' ){
         console.log("vetor:"+nomreqlink.charAt(i));
         aux = 'c';
-        nomreqlink = nomreqlink.substring(0,i--)+aux+nomreqlink.substring(i++,nomreqlink.length);
+        j = i;
+        nomreqlink = nomreqlink.substring(0,j--)+aux+nomreqlink.substring(j+2,nomreqlink.length);
         console.log("2nomreq:"+nomreqlink);
+        
       }
         else  if(nomreqlink.charAt(i) == 'ã' || nomreqlink.charAt(i)== 'ã' || nomreqlink.charAt(i) == 'á'|| nomreqlink.charAt(i) == 'Á'){
           aux = 'a';
-          nomreqlink = nomreqlink.substring(0,--i) +aux+nomreqlink.substring(i++,nomreqlink.length);
+          j=i;
+          nomreqlink = nomreqlink.substring(0,j--) +aux+nomreqlink.substring(j+2,nomreqlink.length);
           console.log("3nomreq:"+nomreqlink);
         }
     }
