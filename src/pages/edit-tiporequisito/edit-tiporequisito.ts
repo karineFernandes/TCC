@@ -30,12 +30,6 @@ export class EditTiporequisitoPage {
  
   alterar(nomreqlink){
     let aux = '';
-    console.log("entrei aqui 1");
-    
-    let requisito = {
-      "codigo": this.codReq,
-      "nome": nomreqlink
-    };
 
    //Modificar a variavel nomeReq para ser inserida no link
    //Tirar caracteres especiais 
@@ -61,23 +55,35 @@ export class EditTiporequisitoPage {
    
     console.log("nomreq:"+nomreqlink);
 
-    this._http.put('/api/GenericRestService/rest/querytojson/UPDTIPOREQUISITO/'+nomreqlink+"&"+this.codReq+"&",requisito)
+    if(this.navParams.get('codReq')){
+    this._http.get('/api/GenericRestService/rest/querytojson/UPDTIPOREQUISITO/'+nomreqlink+'&'+this.codReq+'&')
     .subscribe(
       (tiporequisito)=>{
-        console.log("entrei aqui 3");
+        //console.log("entrei aqui 3");
         console.log(tiporequisito);
-        
+        this.navCtrl.pop();         
       }
     );
-    
-  }
 
-  excluir(){
-  
-    this._http.delete('/api/GenericRestService/rest/querytojson/LISTTIPOREQUISITO/')
+  }else{
+    this._http.get('/api/GenericRestService/rest/querytojson/INSTIPOREQUISITO/'+nomreqlink)
     .subscribe(
       (tiporequisito)=>{
         console.log(tiporequisito);
+        this.navCtrl.pop();          
+      }
+    );
+  }
+       
+  }
+
+  excluir(){ 
+    let id=this.navParams.get('codReq')
+    this._http.get('/api/GenericRestService/rest/querytojson/DELTIPOREQUISITO/'+id+'&')
+    .subscribe(
+      (tiporequisito)=>{
+        console.log(tiporequisito);
+        this.navCtrl.pop();   
       }
     );
 

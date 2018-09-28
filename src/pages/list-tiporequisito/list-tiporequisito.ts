@@ -12,6 +12,7 @@ import { EditTiporequisitoPage } from '../edit-tiporequisito/edit-tiporequisito'
 
 export class ListTiporequisitoPage {
 public tiporequisito:TipoRequisito[];
+public editRequisito: EditTiporequisitoPage;
 
   constructor(public navCtrl: NavController, 
     public navParams: NavParams, 
@@ -33,7 +34,9 @@ public tiporequisito:TipoRequisito[];
     return this.tiporequisito;
   }
 
-  novoRequisito(){ }
+  novoRequisito(nome){ 
+    this.navCtrl.push(EditTiporequisitoPage,{});   
+  }
 
   selecionaRequisito(cod,nome){
     let cn = parseInt(cod);
