@@ -29,51 +29,44 @@ export class EditTiporequisitoPage {
   }
  
   alterar(nomreqlink){
-    let aux = '';
+      let aux = '';
 
-   //Modificar a variavel nomeReq para ser inserida no link
-   //Tirar caracteres especiais 
-     //nomreqlink = nomreqlink.replace(" ","");
+    //Modificar a variavel nomeReq para ser inserida no link
+    //Tirar caracteres especiais 
 
-    for (let i = 0; i < nomreqlink.length;i++ ){
-      let j = 0;
-      if(nomreqlink.charAt(i) == 'ç' ){
-        console.log("vetor:"+nomreqlink.charAt(i));
-        aux = 'c';
-        j = i;
-        nomreqlink = nomreqlink.substring(0,j--)+aux+nomreqlink.substring(j+2,nomreqlink.length);
-        console.log("2nomreq:"+nomreqlink);
-        
-      }
-        else  if(nomreqlink.charAt(i) == 'ã' || nomreqlink.charAt(i)== 'ã' || nomreqlink.charAt(i) == 'á'|| nomreqlink.charAt(i) == 'Á'){
-          aux = 'a';
-          j=i;
-          nomreqlink = nomreqlink.substring(0,j--) +aux+nomreqlink.substring(j+2,nomreqlink.length);
-          console.log("3nomreq:"+nomreqlink);
+      for (let i = 0; i < nomreqlink.length;i++ ){
+        let j = 0;
+        if(nomreqlink.charAt(i) == 'ç' ){
+          aux = 'c';
+          j = i;
+          nomreqlink = nomreqlink.substring(0,j--)+aux+nomreqlink.substring(j+2,nomreqlink.length);
+          
         }
-    }
-   
-    console.log("nomreq:"+nomreqlink);
-
-    if(this.navParams.get('codReq')){
-    this._http.get('/api/GenericRestService/rest/querytojson/UPDTIPOREQUISITO/'+nomreqlink+'&'+this.codReq+'&')
-    .subscribe(
-      (tiporequisito)=>{
-        console.log(tiporequisito);
-        this.navCtrl.pop();         
+          else  if(nomreqlink.charAt(i) == 'ã' || nomreqlink.charAt(i)== 'ã' || nomreqlink.charAt(i) == 'á'|| nomreqlink.charAt(i) == 'Á'){
+            aux = 'a';
+            j=i;
+            nomreqlink = nomreqlink.substring(0,j--) +aux+nomreqlink.substring(j+2,nomreqlink.length);
+          }
       }
-    );
+    
+      if(this.navParams.get('codReq')){
+      this._http.get('/api/GenericRestService/rest/querytojson/UPDTIPOREQUISITO/'+nomreqlink+'&'+this.codReq+'&')
+      .subscribe(
+        (tiporequisito)=>{
+          console.log(tiporequisito);
+          this.navCtrl.pop();         
+        }
+      );
 
-  }else{
-    this._http.get('/api/GenericRestService/rest/querytojson/INSTIPOREQUISITO/'+nomreqlink)
-    .subscribe(
-      (tiporequisito)=>{
-        console.log(tiporequisito);
-        this.navCtrl.pop();          
-      }
-    );
-  }
-       
+    }else{
+      this._http.get('/api/GenericRestService/rest/querytojson/INSTIPOREQUISITO/'+nomreqlink)
+      .subscribe(
+        (tiporequisito)=>{
+          console.log(tiporequisito);
+          this.navCtrl.pop();          
+        }
+      );
+    }       
   }
 
   excluir(){ 
@@ -89,7 +82,3 @@ export class EditTiporequisitoPage {
 
   }
 }
-
-// inserir novo elemento > http://camerascasas.no-ip.info:8085/GenericRestService/rest/querytojson/INSTIPOREQUISITO/TIPOREQUISITOXXXX&
-// alterar elemento > http://camerascasas.no-ip.info:8085/GenericRestService/rest/querytojson/UPDTIPOREQUISITO/
-// deletar elemento > http://camerascasas.no-ip.info:8085/GenericRestService/rest/querytojson/INSTIPOREQUISITOt/
