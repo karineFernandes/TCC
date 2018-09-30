@@ -33,7 +33,7 @@ export class EditTiporequisitoPage {
 
    //Modificar a variavel nomeReq para ser inserida no link
    //Tirar caracteres especiais 
-     nomreqlink = nomreqlink.replace(" ","");
+     //nomreqlink = nomreqlink.replace(" ","");
 
     for (let i = 0; i < nomreqlink.length;i++ ){
       let j = 0;
@@ -59,7 +59,6 @@ export class EditTiporequisitoPage {
     this._http.get('/api/GenericRestService/rest/querytojson/UPDTIPOREQUISITO/'+nomreqlink+'&'+this.codReq+'&')
     .subscribe(
       (tiporequisito)=>{
-        //console.log("entrei aqui 3");
         console.log(tiporequisito);
         this.navCtrl.pop();         
       }
@@ -78,8 +77,9 @@ export class EditTiporequisitoPage {
   }
 
   excluir(){ 
-    let id=this.navParams.get('codReq')
-    this._http.get('/api/GenericRestService/rest/querytojson/DELTIPOREQUISITO/'+id+'&')
+    let id = this.navParams.get('codReq');
+    console.log("codreq:"+id);
+    this._http.get('/api/GenericRestService/rest/querytojson/DELTIPOREQUISITO/'+id)
     .subscribe(
       (tiporequisito)=>{
         console.log(tiporequisito);

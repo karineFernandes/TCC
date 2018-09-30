@@ -6,9 +6,14 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import {HttpClientModule} from "@angular/common/http";
-import { ListTiporequisitoPage } from "../pages/list-tiporequisito/list-tiporequisito";
+import  {HttpClientModule } from "@angular/common/http";
+
+//CRUD Tipo Requisito
+import { ListTiporequisitoPage } from '../pages/list-tiporequisito/list-tiporequisito';
 import { EditTiporequisitoPage } from '../pages/edit-tiporequisito/edit-tiporequisito';
+//CRUD Status Requisito
+import { StatusRequisitoPage } from '../pages/status-requisito/status-requisito';
+import { EditstatusRequisitoPage } from '../pages/editstatus-requisito/editstatus-requisito';
 
 @NgModule({
   declarations: [
@@ -16,6 +21,8 @@ import { EditTiporequisitoPage } from '../pages/edit-tiporequisito/edit-tiporequ
     HomePage,
     ListTiporequisitoPage,
     EditTiporequisitoPage,
+    StatusRequisitoPage,
+    EditstatusRequisitoPage
   ],
   imports: [
     BrowserModule,
@@ -28,6 +35,8 @@ import { EditTiporequisitoPage } from '../pages/edit-tiporequisito/edit-tiporequ
     HomePage,
     ListTiporequisitoPage,
     EditTiporequisitoPage,
+    StatusRequisitoPage,
+    EditstatusRequisitoPage
   ],
   providers: [
     StatusBar,

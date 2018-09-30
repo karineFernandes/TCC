@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import {HttpClient} from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { TipoRequisito } from "../../modelo/TipoRequisito";
 import { EditTiporequisitoPage } from '../edit-tiporequisito/edit-tiporequisito';
 
@@ -12,7 +12,6 @@ import { EditTiporequisitoPage } from '../edit-tiporequisito/edit-tiporequisito'
 
 export class ListTiporequisitoPage {
 public tiporequisito:TipoRequisito[];
-public editRequisito: EditTiporequisitoPage;
 
   constructor(public navCtrl: NavController, 
     public navParams: NavParams, 

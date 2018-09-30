@@ -1,0 +1,26 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Status do Requisito</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <!--Toda vez que encontrar um atributo criar botao 
+      com o nome do atributo -->
+    <button ion-item *ngFor="let statusreq of statusrequisito"
+    (click)="selecionaStatusRequisito(statusreq.codstareq,statusreq.nomstreq)"> {{statusreq.nomstreq}}
+    </button>
+  </ion-list>
+  
+  <!--Criacao de botao para add novos status dos requisitos-->
+  <div id ="mais"><button ion-button round color="primary" 
+    (click)="novoStatusRequisito()">
+    <ion-icon name="add"></ion-icon>
+  </button> 
+  </div>
+  </ion-content>

@@ -1,0 +1,32 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Editar Status do Requisito</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <!--Campo criado para add novo status -->
+      <ion-label color="primary">Nome:</ion-label>
+      <ion-input type="text" placeholder="Nome do Status"
+                  [(ngModel)]="staReq" name="staReq" value={{staReq}}></ion-input>
+    </ion-item>            
+  </ion-list> 
+
+  <div id="mais">
+    <!--botao para alteraçao do item selecionado -->
+    <button ion-button round color="primary"(click)= "alterar(staReq)">
+      <ion-icon name="checkmark"></ion-icon>
+    </button>
+
+    <!--botao para exclusao do item marcado -->
+    <button ion-button round color="danger"(click)= "excluir()">
+        <ion-icon name="trash"></ion-icon>
+    </button>
+  </div>
+</ion-content>
