@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { ListTiporequisitoPage } from '../list-tiporequisito/list-tiporequisito';
 import { HttpClient } from '@angular/common/http';
-import { TipoRequisito } from "../../modelo/TipoRequisito";
+import { IonicPage, NavController, NavParams } from 'ionic-angular';
+
+import { ListTiporequisitoPage } from '../list-tiporequisito/list-tiporequisito';
+import { TipoRequisito } from '../../modelo/TipoRequisito';
 
 
 @IonicPage()
@@ -20,7 +21,6 @@ export class EditTiporequisitoPage {
     public navParams: NavParams,
     private _http:HttpClient) {
     this.codReq = navParams.get('codtipreq');
-    //let requisitos = this.listaRequisitos;
     this.nomeReq = this.navParams.get('nomtipreq');
   }
 
@@ -70,8 +70,7 @@ export class EditTiporequisitoPage {
   }
 
   excluir(){ 
-    let id = this.navParams.get('codReq');
-    console.log("codreq:"+id);
+    let id = this.navParams.get('codtipreq');
     this._http.get('/api/GenericRestService/rest/querytojson/DELTIPOREQUISITO/'+id)
     .subscribe(
       (tiporequisito)=>{

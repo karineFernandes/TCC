@@ -9,6 +9,9 @@ import { TipoRequisito } from '../../modelo/TipoRequisito';
 import  { StatusRequisitoPage } from '../../pages/status-requisito/status-requisito';
 import { StatusRequisito }  from '../../modelo/StatusRequisito';
 
+import { ProjetoPage } from '../../pages/projeto/projeto'
+import { Projeto } from '../../modelo/Projeto'
+
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -25,7 +28,9 @@ export class HomePage {
     this.navCtrl.push(StatusRequisitoPage);
   }
 
-  Projeto(){}
+  Projeto(){
+    this.navCtrl.push(ProjetoPage);
+  }
 
   stakeHolder(){}
 

@@ -1,0 +1,33 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Projeto</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <!--Toda vez que encontrar um atributo criar botao 
+      com o nome do atributo -->
+    <button ion-item *ngFor="let projeto of proj"
+    (click)="selecionaProjeto(projeto.codpro,projeto.nompro,projeto.despro,projeto.analiseviab,
+    projeto.escopo,projeto.nompro1,projeto.codprodes)">Projeto: {{projeto.nompro}}
+     <h2>Desenvolvimento Projeto: {{projeto.despro}}</h2> 
+     <h3>Analise de viabilidade: {{projeto.analiseviab}}</h3>
+     <h4>Escopo: {{projeto.escopo}}</h4>
+     <h5>Projeto1: {{projeto.nompro1}}</h5>
+     <h6>Codigo processo de desenvolvimento:{{projeto.codprodes}}</h6>
+  </button>
+  </ion-list>
+  
+  <!--Criacao de botao para add novos requisitos-->
+  <div id ="mais"><button ion-button round color="primary" 
+    (click)="novoProjeto()">
+    <ion-icon name="add"></ion-icon>
+  </button> 
+  </div>
+  </ion-content>
+

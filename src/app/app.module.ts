@@ -14,6 +14,10 @@ import { EditTiporequisitoPage } from '../pages/edit-tiporequisito/edit-tiporequ
 //CRUD Status Requisito
 import { StatusRequisitoPage } from '../pages/status-requisito/status-requisito';
 import { EditstatusRequisitoPage } from '../pages/editstatus-requisito/editstatus-requisito';
+//CRUD Projeto
+import { ProjetoPage } from '../pages/projeto/projeto';
+import { EditProjetoPage } from '../pages/edit-projeto/edit-projeto'
+
 
 @NgModule({
   declarations: [
@@ -22,7 +26,9 @@ import { EditstatusRequisitoPage } from '../pages/editstatus-requisito/editstatu
     ListTiporequisitoPage,
     EditTiporequisitoPage,
     StatusRequisitoPage,
-    EditstatusRequisitoPage
+    EditstatusRequisitoPage,
+    ProjetoPage,
+    EditProjetoPage
   ],
   imports: [
     BrowserModule,
@@ -36,7 +42,9 @@ import { EditstatusRequisitoPage } from '../pages/editstatus-requisito/editstatu
     ListTiporequisitoPage,
     EditTiporequisitoPage,
     StatusRequisitoPage,
-    EditstatusRequisitoPage
+    EditstatusRequisitoPage,
+    ProjetoPage,
+    EditProjetoPage
   ],
   providers: [
     StatusBar,

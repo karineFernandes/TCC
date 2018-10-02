@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { StatusRequisitoPage } from '../status-requisito/status-requisito';
 import { HttpClient } from '@angular/common/http';
-import { StatusRequisito } from "../../modelo/StatusRequisito";
+import { StatusRequisito } from '../../modelo/StatusRequisito';
 
 @IonicPage()
 @Component({
@@ -18,7 +18,7 @@ export class EditstatusRequisitoPage {
   constructor(public navCtrl: NavController, 
     public navParams: NavParams,
     private _http:HttpClient) {
-    this.codStaReq = navParams.get('codstareq');
+    this.codStaReq = this.navParams.get('codstareq');
     this.nomeStaReq = this.navParams.get('nomstreq');
   }
 
@@ -31,8 +31,6 @@ export class EditstatusRequisitoPage {
 
     //Modificar a variavel nomeStaReq para ser inserida no link
     //Tirar caracteres especiais 
-      nomreqlink = nomreqlink.replace(" ","");
-
       for (let i = 0; i < nomreqlink.length;i++ ){
         let j = 0;
         if(nomreqlink.charAt(i) == 'ç' ){
@@ -70,7 +68,7 @@ export class EditstatusRequisitoPage {
   }
   
   excluir(){ 
-    let id = this.navParams.get('codStaReq');
+    let id = this.navParams.get('codstareq');
     console.log("codStaReq:"+id);
     this._http.get('/api/GenericRestService/rest/querytojson/DELSTATUSREQ/'+id)
     .subscribe(
