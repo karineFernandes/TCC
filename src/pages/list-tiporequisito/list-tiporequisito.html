@@ -13,13 +13,13 @@
   <!--Toda vez que encontrar um atributo criar botao 
     com o nome do atributo -->
   <button ion-item *ngFor="let tiporeq of tiporequisito"
-  (click)="selecionaRequisito(tiporeq.codtipreq,tiporeq.nomtipreq)"> {{tiporeq.nomtipreq}}
+  (click)="selecionaTipoRequisito(tiporeq.codtipreq,tiporeq.nomtipreq)"> {{tiporeq.nomtipreq}}
   </button>
 </ion-list>
 
 <!--Criacao de botao para add novos requisitos-->
 <div id ="mais"><button ion-button round color="primary" 
-  (click)="novoRequisito()">
+  (click)="novoTipoRequisito()">
   <ion-icon name="add"></ion-icon>
 </button> 
 </div>

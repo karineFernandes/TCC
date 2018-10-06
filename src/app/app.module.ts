@@ -17,7 +17,9 @@ import { EditstatusRequisitoPage } from '../pages/editstatus-requisito/editstatu
 //CRUD Projeto
 import { ProjetoPage } from '../pages/projeto/projeto';
 import { EditProjetoPage } from '../pages/edit-projeto/edit-projeto'
-
+//CRUD Requisitos
+import { RequisitosPage } from '../pages/requisitos/requisitos';
+import { EditRequisitosPage } from '../pages/edit-requisitos/edit-requisitos';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { EditProjetoPage } from '../pages/edit-projeto/edit-projeto'
     StatusRequisitoPage,
     EditstatusRequisitoPage,
     ProjetoPage,
-    EditProjetoPage
+    EditProjetoPage,
+    RequisitosPage,
+    EditRequisitosPage 
   ],
   imports: [
     BrowserModule,
@@ -44,7 +48,9 @@ import { EditProjetoPage } from '../pages/edit-projeto/edit-projeto'
     StatusRequisitoPage,
     EditstatusRequisitoPage,
     ProjetoPage,
-    EditProjetoPage
+    EditProjetoPage,
+    RequisitosPage,
+    EditRequisitosPage 
   ],
   providers: [
     StatusBar,

@@ -29,15 +29,15 @@ public tiporequisito:TipoRequisito[];
     console.log('ionViewDidLoad ListTiporequisitoPage');
   }
 
-  getRequisito(){
+  getTipoRequisito(){
     return this.tiporequisito;
   }
 
-  novoRequisito(nome){ 
+  novoTipoRequisito(nome){ 
     this.navCtrl.push(EditTiporequisitoPage,{});   
   }
 
-  selecionaRequisito(cod,nome){
+  selecionaTipoRequisito(cod,nome){
     let cn = parseInt(cod);
     this.navCtrl.push(EditTiporequisitoPage,{codtipreq:cn,nomtipreq:nome});
   }

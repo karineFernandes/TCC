@@ -1,0 +1,49 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Requisitos</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <!--Toda vez que encontrar um atributo criar botao 
+      com o nome do atributo -->
+    <button ion-item *ngFor="let req of requisito"
+    (click)="selecionaRequisito(req.nomereq,req.codstareq,req.codresp, 
+      req.desreq,req.nompro,req.codspr,req.codfor,req.codtipreq,req.nomspr,
+      req.codpro,req.nomtipreq,req.datareq,req.nomstreq,
+      req.codpro1,req.idreq,req.numhorpre,req.codreq,req.codspr1)">
+      
+        Requisito:{{req.nomereq}}
+      <h3>Descrição: {{req.desreq}}</h3> 
+      <p> 
+        ID: {{req.idreq}}<br>
+        Nome projeto: {{req.nompro}}<br>
+        Codigo projeto: {{req.codpro}}<br>
+        Nome tipo requisito: {{req.nomtipreq}}<br> 
+        Codigo tipo requisito:{{req.codtipreq}}<br>
+        Codigo resposta: {{req.codresp}}<br>
+        Nome status: {{req.nomstreq}}<br>
+        Codigo status: {{req.codstareq}}<br>
+        Nome Sprint: {{req.nomspr}}<br>
+        Codigo Sprint: {{req.codspr}}<br>
+        Codigo For: {{req.codfor}}<br>
+        Codigo Projeto1: {{req.codpro1}}<br>
+        Numero hora precisa: {{req.numhorpre}}<br>
+        Codigo Sprint1: {{req.codspr1}}<br>
+        Data: {{req.datareq}}
+      </p>
+    </button>
+  </ion-list>
+  
+  <!--Criacao de botao para add novos requisitos-->
+  <div id ="mais"><button ion-button round color="primary" 
+    (click)="novoRequisito()">
+    <ion-icon name="add"></ion-icon>
+  </button> 
+  </div>
+  </ion-content>

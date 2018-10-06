@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
-import { ListTiporequisitoPage } from '../list-tiporequisito/list-tiporequisito';
+//import { ListTiporequisitoPage } from '../list-tiporequisito/list-tiporequisito';
 import { TipoRequisito } from '../../modelo/TipoRequisito';
 
 
