@@ -49,23 +49,24 @@ export class EditTiporequisitoPage {
           }
       }
     
-      if(this.navParams.get('codReq')){
-      this._http.get('/api/GenericRestService/rest/querytojson/UPDTIPOREQUISITO/'+nomreqlink+'&'+this.codReq+'&')
-      .subscribe(
-        (tiporequisito)=>{
-          console.log(tiporequisito);
-          this.navCtrl.pop();         
-        }
-      );
-
-    }else{
-      this._http.get('/api/GenericRestService/rest/querytojson/INSTIPOREQUISITO/'+nomreqlink)
-      .subscribe(
-        (tiporequisito)=>{
-          console.log(tiporequisito);
-          this.navCtrl.pop();          
-        }
-      );
+      if(this.navParams.get('codtipreq')){
+        this._http.get('/api/GenericRestService/rest/querytojson/UPDTIPOREQUISITO/'+nomreqlink+'&'+this.codReq+'&')
+        .subscribe(
+          (tiporequisito)=>{
+            console.log(tiporequisito);
+            this.navCtrl.pop();  
+            console.log('1');       
+          }
+        );
+       }else{
+        this._http.get('/api/GenericRestService/rest/querytojson/INSTIPOREQUISITO/'+nomreqlink)
+        .subscribe(
+          (tiporequisito)=>{
+            console.log(tiporequisito);
+            this.navCtrl.pop();
+            console.log('2');           
+          }
+        );
     }       
   }
 

@@ -63,7 +63,7 @@ export class EditProjetoPage {
       );
 
     }else{
-      this._http.get('/api/GenericRestService/rest/querytojson/INSProjeto/'+codProcessoDesenvol+'&'+nomreqlink+'&'+desenvopro+'&'+esco+'&'+analiviab+'&'+this.codProje)
+      this._http.get('/api/GenericRestService/rest/querytojson/INSProjeto/'+codProcessoDesenvol+'&'+nomreqlink+'&'+desenvopro+'&'+esco+'&'+analiviab+'&')
       .subscribe(
         (projet)=>{
           console.log(projet);

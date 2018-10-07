@@ -14,7 +14,7 @@ export class EditstatusRequisitoPage {
   
   codStaReq: number;
   nomeStaReq: String;
-
+  nomreqlink: String;
   constructor(public navCtrl: NavController, 
     public navParams: NavParams,
     private _http:HttpClient) {
