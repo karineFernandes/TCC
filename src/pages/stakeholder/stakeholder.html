@@ -1,0 +1,32 @@
+<ion-header>
+
+    <ion-navbar>
+      <ion-title>STAKEHOLDER</ion-title>
+    </ion-navbar>
+  
+  </ion-header>
+ 
+  <ion-content padding>
+    <ion-list>
+      <!--Toda vez que encontrar um atributo criar botao 
+        com o nome do atributo -->
+      <button ion-item *ngFor="let stakeho of stake"
+      (click)="selecionaSTAKE(stakeho.staktip,stakeho.codstak,stakeho.cpfstak,
+      stakeho.staksen,stakeho.nomstak,stakeho.stakemail)">
+        StakeHolder: {{stakeho.nomstak}}
+       <h2>Tipo: {{stakeho.staktip}}</h2> 
+       <h3>Email: {{stakeho.stakemail}}</h3>
+       <h4>CPF: {{stakeho.cpfstak}}</h4>
+       <h5>Senha: {{stakeho.staksen}}</h5>
+    </button>
+    </ion-list>
+    
+    <!--Criacao de botao para add novos requisitos-->
+    <div id ="mais"><button ion-button round color="primary" 
+      (click)="novoStake()">
+      <ion-icon name="add"></ion-icon>
+    </button> 
+    </div>
+    </ion-content>
+  
+  

@@ -20,6 +20,9 @@ import { EditProjetoPage } from '../pages/edit-projeto/edit-projeto'
 //CRUD Requisitos
 import { RequisitosPage } from '../pages/requisitos/requisitos';
 import { EditRequisitosPage } from '../pages/edit-requisitos/edit-requisitos';
+//CRUDSTAKEHOLDER
+import { StakeholderPage } from '../pages/stakeholder/stakeholder';
+import { EditstakeholderPage } from '../pages/editstakeholder/editstakeholder';
 
 @NgModule({
   declarations: [
@@ -32,7 +35,9 @@ import { EditRequisitosPage } from '../pages/edit-requisitos/edit-requisitos';
     ProjetoPage,
     EditProjetoPage,
     RequisitosPage,
-    EditRequisitosPage 
+    EditRequisitosPage,
+    StakeholderPage,
+    EditstakeholderPage 
   ],
   imports: [
     BrowserModule,
@@ -50,7 +55,9 @@ import { EditRequisitosPage } from '../pages/edit-requisitos/edit-requisitos';
     ProjetoPage,
     EditProjetoPage,
     RequisitosPage,
-    EditRequisitosPage 
+    EditRequisitosPage,
+    StakeholderPage,
+    EditstakeholderPage 
   ],
   providers: [
     StatusBar,
