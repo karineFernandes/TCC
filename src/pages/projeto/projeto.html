@@ -13,14 +13,17 @@
     <!--Toda vez que encontrar um atributo criar botao 
       com o nome do atributo -->
     <button ion-item *ngFor="let projeto of proj"
-    (click)="selecionaProjeto(projeto.codpro,projeto.nompro,projeto.despro,projeto.analiseviab,
-    projeto.escopo,projeto.nompro1,projeto.codprodes)">Projeto: {{projeto.nompro}}
-     <h2>Desenvolvimento Projeto: {{projeto.despro}}</h2> 
-     <h3>Analise de viabilidade: {{projeto.analiseviab}}</h3>
-     <h4>Escopo: {{projeto.escopo}}</h4>
-     <h5>Projeto1: {{projeto.nompro1}}</h5>
-     <h6>Codigo processo de desenvolvimento:{{projeto.codprodes}}</h6>
-  </button>
+      (click)="selecionaProjeto(projeto.codpro,projeto.nompro,projeto.despro,projeto.analiseviab,
+      projeto.escopo,projeto.nompro1,projeto.codprodes)">
+      Projeto: {{projeto.nompro}}
+      <p>
+        Desenvolvimento Projeto: {{projeto.despro}}<br>
+        Analise de viabilidade: {{projeto.analiseviab}}<br>
+        Escopo: {{projeto.escopo}}<br>
+        Projeto1: {{projeto.nompro1}}<br>
+        Codigo processo de desenvolvimento:{{projeto.codprodes}}
+      </p>
+    </button>
   </ion-list>
   
   <!--Criacao de botao para add novos requisitos-->

@@ -1,0 +1,35 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Sprint</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <!--Toda vez que encontrar um atributo criar botao 
+      com o nome do atributo -->
+    <button ion-item *ngFor="let s of sprin"
+      (click)="selecionaSprint(s.nomspr,s.sprdes,
+      s.nompro,s.codpro,
+      s.sprdatini,sprdatafin,s.sprnumdia)">
+      Sprint: {{s.nomspr}}
+      <p> 
+        Descricao Sprint: {{s.sprdes}}<br>
+        Nome projeto: {{s.nompro}}<br>
+        Codigo Projeto: {{s.codpro}}<br>
+        Data inicio: {{s.sprdatini}}<br>
+        Data final: {{s.sprdatfin}}
+      </p>  
+   </button>
+  </ion-list>
+  
+  <!--Criacao de botao para add novos requisitos-->
+  <div id ="mais"><button ion-button round color="primary" 
+    (click)="novoSprint()">
+    <ion-icon name="add"></ion-icon>
+  </button> 
+  </div>
+  </ion-content>
