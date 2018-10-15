@@ -12,16 +12,16 @@
     <!--Toda vez que encontrar um atributo criar botao 
       com o nome do atributo -->
     <button ion-item *ngFor="let s of sprin"
-      (click)="selecionaSprint(s.nomspr,s.sprdes,
-      s.nompro,s.codpro,
-      s.sprdatini,sprdatafin,s.sprnumdia)">
+      (click)="selecionaSprint(s.nomspr,s.sprdes,s.nompro,s.codpro,s.sprdatini,
+      s.sprdatfin,s.sprnumdias,s.codspr)">
       Sprint: {{s.nomspr}}
       <p> 
         Descricao Sprint: {{s.sprdes}}<br>
         Nome projeto: {{s.nompro}}<br>
         Codigo Projeto: {{s.codpro}}<br>
         Data inicio: {{s.sprdatini}}<br>
-        Data final: {{s.sprdatfin}}
+        Data final: {{s.sprdatfin}}<br>
+        Numero de dias:{{s.sprnumdias}}
       </p>  
    </button>
   </ion-list>

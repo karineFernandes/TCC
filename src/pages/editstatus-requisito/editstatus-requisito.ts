@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { StatusRequisitoPage } from '../status-requisito/status-requisito';
 import { HttpClient } from '@angular/common/http';
+//import { StatusRequisitoPage } from '../status-requisito/status-requisito';
 import { StatusRequisito } from '../../modelo/StatusRequisito';
 
 @IonicPage()

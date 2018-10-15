@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { RequisitosPage } from '../requisitos/requisitos';
 import { Requisitos } from '../../modelo/Requisitos';
 
 @IonicPage()

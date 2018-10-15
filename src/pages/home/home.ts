@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { HttpClient } from '@angular/common/http';
+import { NavController, NavParams } from 'ionic-angular';
+//import { HttpClient } from '@angular/common/http';
 import { AlertController } from 'ionic-angular';
 
 //Paginas criadas para a criacao do projeto
@@ -10,6 +10,7 @@ import { ProjetoPage } from '../../pages/projeto/projeto'
 import { RequisitosPage } from '../../pages/requisitos/requisitos';
 import { StakeholderPage } from '../../pages/stakeholder/stakeholder';
 import { SprintPage } from '../../pages/sprint/sprint';
+
 
 @Component({
   selector: 'page-home',

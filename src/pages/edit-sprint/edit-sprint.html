@@ -1,0 +1,62 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Editar Sprint</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-list>    
+        <ion-item>
+          <ion-input type="text" placeholder="nome sprint"
+                      [(ngModel)]="nomspr" name="nomspr" value={{nomspri}}></ion-input>
+        </ion-item>
+    
+        <ion-item>
+          <ion-input type="text" placeholder="Descrição da Sprint"
+                      [(ngModel)]="sprde" name="sprde" value={{sprides}}></ion-input>
+        </ion-item>
+    
+        <ion-item>
+          <ion-input type="text" placeholder="Nome do projeto "
+                      [(ngModel)]="nompro" name="nompro" value={{nomproj}}></ion-input>
+        </ion-item>
+        
+        <ion-item>
+          <ion-input type="text" placeholder="Codigo do projeto"
+                      [(ngModel)]="codpro" name="codpro" value={{codproj}}></ion-input>
+        </ion-item>
+    
+        <ion-item>
+          <ion-input type="text" placeholder="Inicio"
+                      [(ngModel)]="sprdatini" name="sprdatini" value={{spridatini}}></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-input type="text" placeholder="Final"
+                        [(ngModel)]="sprdatfin" name="sprdatfin" value={{spridatfin}}></ion-input>
+        </ion-item>
+
+        <ion-item> 
+          <ion-input type="text" placeholder="Numero de dias"
+                        [(ngModel)]="sprnumdias" name="sprnumdias" value={{sprinumdias}}></ion-input>
+        </ion-item>
+    </ion-list>
+
+    <div id="mais">
+        <!--botao para alteraçao do item selecionado -->
+        <button ion-button round color="primary"(click)= "alterar(nomspr,sprdes,nompro,codpro,sprdatini,
+        sprdatfin,sprnumdias)">
+          <ion-icon name="checkmark"></ion-icon>
+        </button>
+    
+        <!--botao para exclusao do item marcado -->
+        <button ion-button round color="danger"(click)= "excluir()">
+            <ion-icon name="trash"></ion-icon>
+        </button>
+      </div>
+
+</ion-content>

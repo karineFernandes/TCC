@@ -25,6 +25,7 @@ import { StakeholderPage } from '../pages/stakeholder/stakeholder';
 import { EditstakeholderPage } from '../pages/editstakeholder/editstakeholder';
 //CRUD Sprint
 import { SprintPage } from '../pages/sprint/sprint';
+import { EditSprintPage } from '../pages/edit-sprint/edit-sprint';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { SprintPage } from '../pages/sprint/sprint';
     EditRequisitosPage,
     StakeholderPage,
     EditstakeholderPage,
-    SprintPage 
+    SprintPage,
+    EditSprintPage 
   ],
   imports: [
     BrowserModule,
@@ -61,7 +63,8 @@ import { SprintPage } from '../pages/sprint/sprint';
     EditRequisitosPage,
     StakeholderPage,
     EditstakeholderPage,
-    SprintPage 
+    SprintPage,
+    EditSprintPage 
   ],
   providers: [
     StatusBar,

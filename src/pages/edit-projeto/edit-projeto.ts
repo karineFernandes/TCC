@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { ProjetoPage } from '../projeto/projeto';
+//import { ProjetoPage } from '../projeto/projeto';
 import { Projeto } from '../../modelo/Projeto';
 
 @IonicPage()
