@@ -2,7 +2,7 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Editar Projeto</ion-title>
+    <ion-title>Projeto</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -41,6 +41,10 @@
   </ion-list> 
 
   <div id="mais">
+    <button ion-button round color="dark"(click)="Sprint()">
+      Sprint
+    </button>
+
     <!--botao para alteraçao do item selecionado -->
     <button ion-button round color="primary"(click)= "alterar(nomPro,despro,analiseviab,escopo,nomPro1,codprodes)">
       <ion-icon name="checkmark"></ion-icon>
@@ -50,5 +54,8 @@
     <button ion-button round color="danger"(click)= "excluir()">
         <ion-icon name="trash"></ion-icon>
     </button>
+
+    
+
   </div>
 </ion-content>

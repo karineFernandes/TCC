@@ -10,20 +10,20 @@
 
 <ion-content padding>
   <ion-list>
-    <!--Toda vez que encontrar um atributo criar botao 
-      com o nome do atributo -->
-    <button ion-item *ngFor="let projeto of proj"
+    <ion-thumbnail item-start>
+      <button ion-item *ngFor="let projeto of proj" 
       (click)="selecionaProjeto(projeto.codpro,projeto.nompro,projeto.despro,projeto.analiseviab,
-      projeto.escopo,projeto.nompro1,projeto.codprodes)">
-      Projeto: {{projeto.nompro}}
-      <p>
-        Desenvolvimento Projeto: {{projeto.despro}}<br>
-        Analise de viabilidade: {{projeto.analiseviab}}<br>
-        Escopo: {{projeto.escopo}}<br>
-        Projeto1: {{projeto.nompro1}}<br>
-        Codigo processo de desenvolvimento:{{projeto.codprodes}}
-      </p>
-    </button>
+        projeto.escopo,projeto.nompro1,projeto.codprodes)">
+        <button ion-button clear item-end>ver mais</button> 
+        <h2>Projeto: {{projeto.nompro}}</h2>
+          <p>Desenvolvimento Projeto: {{projeto.despro}}
+            Analise de viabilidade: {{projeto.analiseviab}}<br>
+            Escopo: {{projeto.escopo}}<br>
+            Projeto1: {{projeto.nompro1}}<br>
+            Codigo processo de desenvolvimento:{{projeto.codprodes}}
+        </p>
+      </button>
+    </ion-thumbnail>   
   </ion-list>
   
   <!--Criacao de botao para add novos requisitos-->

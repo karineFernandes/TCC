@@ -11,24 +11,24 @@ import { Requisitos } from '../../modelo/Requisitos';
 export class EditRequisitosPage {
   public req:Requisitos;
 
-  codstareq: number; //1
-  codresp: number; //2,
-  nomereq: String; //"Requisito1",
-  desreq: String; //"Descr",
-  nompro: String; //"Never Alone",
-  codspr: String; // 2,
-  codfor: number;   //7,
-  codtipreq: number; //2,
-  nomspr: String; //"Sprint 2",
-  codpro: number;// 1,
-  nomtipreq: String; //"thatreq7777",
-  datareq: Date; //"2016-04-05",
-  nomstreq: String; //"Recebido",
-  codpro1: number; //1,
-  idreq: String; //"REQ1",
-  numhorpre: number; //10,
-  codreq: number; // 1,
-  codspr1: number;// 2
+  codstareq: number; 
+  codresp: number; 
+  nomereq: String; 
+  desreq: String; 
+  nompro: String; 
+  codspr: String; 
+  codfor: number; 
+  codtipreq: number;
+  nomspr: String; 
+  codpro: number;
+  nomtipreq: String;
+  datareq: Date; 
+  nomstreq: String;
+  codpro1: number; 
+  idreq: String; 
+  numhorpre: number; 
+  codreq: number; 
+  codspr1: number;
   
   constructor(public navCtrl: NavController, 
     public navParams: NavParams,

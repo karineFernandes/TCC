@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
 import { SprintM } from '../../modelo/SprintM';
+import { RequisitosPage } from '../requisitos/requisitos';
 
-@IonicPage()
 @Component({
   selector: 'page-edit-sprint',
   templateUrl: 'edit-sprint.html',
@@ -20,7 +20,9 @@ export class EditSprintPage {
     spridatfin:string; 
     sprinumdias:number; 
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private _http:HttpClient) {
+  constructor(public navCtrl: NavController, 
+    public navParams: NavParams, 
+    private _http:HttpClient) {
     this.codspri = this.navParams.get('codisprin');
     this.nomspri = this.navParams.get('nomespr');
     this.sprides = this.navParams.get('sprdesc');
@@ -70,6 +72,10 @@ export class EditSprintPage {
 
   }
 
+  Requisitos(){  
+    this.navCtrl.push(RequisitosPage,{codSprint:this.codspri});                
+  }
+ 
   ionViewDidLoad() {
     console.log('ionViewDidLoad EditSprintPage');
   }

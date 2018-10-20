@@ -16,11 +16,11 @@ export class SprintPage {
   constructor(public navCtrl: NavController, 
     public navParams: NavParams,
     private _http:HttpClient) {
-     this.codproj = this.navParams.get('codinsClient');
+     this.codproj = this.navParams.get('codProjeto');
       this._http.get<SprintM[]>('/api/GenericRestService/rest/querytojson/LISTSprint/'+this.codproj)
         .subscribe(
           (sprin)=>{
-            console.log(sprin);
+            console.log("sprint:"+sprin);
             this.sprin = sprin;
           }
         );
@@ -42,6 +42,7 @@ export class SprintPage {
     nomeproj:nompro,codiproje:codiproj,spridatainicio:sprdatini,spridatafinal:sprdatafin,
     sprinumdia:sprnumdia,codisprin:codispri});
   }
+  
   ionViewDidLoad() {
     console.log('ionViewDidLoad SprintPage');
   }

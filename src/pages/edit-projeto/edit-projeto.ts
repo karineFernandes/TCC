@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-//import { ProjetoPage } from '../projeto/projeto';
-import { Projeto } from '../../modelo/Projeto';
+import { SprintPage } from '../sprint/sprint';
+import { Projeto } from '../../modelo/Projeto'; 
 
 @IonicPage()
 @Component({
@@ -10,7 +10,7 @@ import { Projeto } from '../../modelo/Projeto';
   templateUrl: 'edit-projeto.html',
 })
 export class EditProjetoPage {
-  public projet: Projeto;
+  public projet:Projeto;
 
   codProje: number;  
   nomeProje: String;
@@ -82,6 +82,13 @@ export class EditProjetoPage {
         this.navCtrl.pop();         
       }
     );
+  }
+
+
+  Sprint(){  
+    console.log("entrei aqui");
+    this.navCtrl.push(SprintPage,{codProjeto:this.codProje}); 
+                 
   }
 
   ionViewDidLoad() {
