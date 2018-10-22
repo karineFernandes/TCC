@@ -11,18 +11,19 @@
 <ion-content padding>
   <ion-list>
     <ion-thumbnail item-start>
-      <button ion-item *ngFor="let projeto of proj" 
-      (click)="selecionaProjeto(projeto.codpro,projeto.nompro,projeto.despro,projeto.analiseviab,
-        projeto.escopo,projeto.nompro1,projeto.codprodes)">
-        <button ion-button clear item-end>ver mais</button> 
+      <ion-item *ngFor="let projeto of proj">
         <h2>Projeto: {{projeto.nompro}}</h2>
-          <p>Desenvolvimento Projeto: {{projeto.despro}}
-            Analise de viabilidade: {{projeto.analiseviab}}<br>
-            Escopo: {{projeto.escopo}}<br>
-            Projeto1: {{projeto.nompro1}}<br>
-            Codigo processo de desenvolvimento:{{projeto.codprodes}}
+        <p>Desenvolvimento Projeto: {{projeto.despro}}
+          Analise de viabilidade: {{projeto.analiseviab}}<br>
+          Escopo: {{projeto.escopo}}<br>
+          Projeto1: {{projeto.nompro1}}<br>
+          Codigo processo de desenvolvimento:{{projeto.codprodes}}
         </p>
-      </button>
+        <button ion-button clear item-end (click)="selecionaProjeto(projeto.codpro,projeto.nompro,
+          projeto.despro,projeto.analiseviab,projeto.escopo,projeto.nompro1,projeto.codprodes)">
+          ver mais
+        </button> 
+      </ion-item>
     </ion-thumbnail>   
   </ion-list>
   

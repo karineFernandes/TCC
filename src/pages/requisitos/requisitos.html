@@ -12,33 +12,32 @@
   <ion-list>
     <ion-thumbnail item-start>
       <!--Toda vez que encontrar um atributo criar botao 
-        com o nome do atributo -->
-      <button ion-item *ngFor="let req of requisito"
-        (click)="selecionaRequisito(req.nomereq,req.codstareq,req.codresp, 
+        com o nome do atributo *ngIf="req.codspr == codSPrint"--> 
+        <ion-item ion-item *ngFor="let req of requisito" >           
+          <h2>Requisito:{{req.nomereq}}</h2>
+          <p>   
+            Descrição: {{req.desreq}}
+            ID: {{req.idreq}}<br>
+            Nome projeto: {{req.nompro}}<br>
+            Codigo projeto: {{req.codpro}}<br>
+            Nome tipo requisito: {{req.nomtipreq}}<br> 
+            Codigo tipo requisito:{{req.codtipreq}}<br>
+            Codigo resposta: {{req.codresp}}<br>
+            Nome status: {{req.nomstreq}}<br>
+            Codigo status: {{req.codstareq}}<br>
+            Nome Sprint: {{req.nomspr}}<br>
+            Codigo Sprint: {{req.codspr}}<br>
+            Codigo For: {{req.codfor}}<br>
+            Codigo Projeto1: {{req.codpro1}}<br>
+            Numero hora precisa: {{req.numhorpre}}<br>
+            Codigo Sprint1: {{req.codspr1}}<br>
+            Data: {{req.datareq}} 
+          </p>      
+          <button ion-button clear item-end (click)="selecionaRequisito(req.nomereq,req.codstareq,req.codresp, 
           req.desreq,req.nompro,req.codspr,req.codfor,req.codtipreq,req.nomspr,
           req.codpro,req.nomtipreq,req.datareq,req.nomstreq,
-          req.codpro1,req.idreq,req.numhorpre,req.codreq,req.codspr1)">
-          <button ion-button clear item-end>Ver mais</button> 
-        <h2>Requisito:{{req.nomereq}}</h2>
-        <p>   
-          Descrição: {{req.desreq}}
-          ID: {{req.idreq}}<br>
-          Nome projeto: {{req.nompro}}<br>
-          Codigo projeto: {{req.codpro}}<br>
-          Nome tipo requisito: {{req.nomtipreq}}<br> 
-          Codigo tipo requisito:{{req.codtipreq}}<br>
-          Codigo resposta: {{req.codresp}}<br>
-          Nome status: {{req.nomstreq}}<br>
-          Codigo status: {{req.codstareq}}<br>
-          Nome Sprint: {{req.nomspr}}<br>
-          Codigo Sprint: {{req.codspr}}<br>
-          Codigo For: {{req.codfor}}<br>
-          Codigo Projeto1: {{req.codpro1}}<br>
-          Numero hora precisa: {{req.numhorpre}}<br>
-          Codigo Sprint1: {{req.codspr1}}<br>
-          Data: {{req.datareq}}
-        </p>
-      </button>
+          req.codpro1,req.idreq,req.numhorpre,req.codreq,req.codspr1)">Ver mais</button> 
+      </ion-item>     
     </ion-thumbnail>  
   </ion-list>
   

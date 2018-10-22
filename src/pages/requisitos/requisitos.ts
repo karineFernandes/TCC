@@ -11,26 +11,27 @@ import { EditRequisitosPage } from '../../pages/edit-requisitos/edit-requisitos'
 })
 export class RequisitosPage {
   public requisito:Requisitos[];
+
   codSPrint:number;
   codSpr:number;
 
   constructor(public navCtrl: NavController, 
     public navParams: NavParams, 
     private _http:HttpClient) {
-    this.codSPrint = this.navParams.get('codSprint');
+
+    this.codSPrint = this.navParams.get('codSprint');//informacao passada pela tela sprint
     this.codSpr = this.navParams.get('codspr');
+
     this._http.get<Requisitos[]>('/api/GenericRestService/rest/querytojson/LISTREQUISITO/null')
       .subscribe(
         (requisito)=>{
-          console.log(requisito);
-         for(let i = 0; i<requisito.length;i++){ 
-            if(this.codSPrint == this.codSpr){
-              this.requisito=requisito;
-              console.log("eu:"+requisito);
-            }
-          } 
+          console.log("eu1:"+requisito);
+            this.requisito=requisito.filter((r)=>{
+              console.log("r:",r);
+              if(r.codspr==this.codSPrint){return true}}); 
+
         }
-      );
+      );    
   }
 
   getRequisitos(){
