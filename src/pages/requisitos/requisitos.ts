@@ -27,8 +27,8 @@ export class RequisitosPage {
         (requisito)=>{
           console.log("eu1:"+requisito);
             this.requisito=requisito.filter((r)=>{
-              console.log("r:",r);
-              if(r.codspr==this.codSPrint){return true}}); 
+              //console.log("r:",r);
+              if(r.codspr==this.codSPrint+" "){return true}}); 
 
         }
       );    

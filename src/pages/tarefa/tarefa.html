@@ -1,0 +1,50 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Tarefa</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <ion-thumbnail item-start>
+      <ion-item *ngFor="let t of tarefa">
+        <h2>Tarefa:{{t.nomtar}}</h2>
+        <p> Descricao Tarefa: {{t.desctar}}<br>
+            Nome Requisito:{{t.nomereq}}<br>
+            Codigo Requisito:{{t.codreq}}<br>
+            Id Requisito:{{t.idreq}}<br>
+            Tipo tarefa: {{t.codtiptar}}<br>
+            Nome tipo tarefa:{{t.nomtiptar}}<br>
+            Codigo Stakeholder:{{t.codstak}}<br>
+            Nome Stakeholder:{{t.nomstak}}<br>
+            Status:{{t.tarstatus}}<br>
+            Tarefa Principal:{{t.tarpri}}<br>
+            Data inicio pre:{{t.tarinipre}}<br>
+            Data final pre:{{t.tarfinpre}}<br>          
+            Data final real:{{t.tarfinreal}}<br>
+            Número de horas Ajuda:{{t.numhortaraju}}<br>
+            Final ajuda:{{t.tarfinpreaju}}<br>
+            Numero de horas:{{t.numhortar}}  
+        </p>  
+        <button ion-button clear item-end 
+        (click)="selecionaTarefa(t.codtar,t.nomtar,t.desctar,t.nomereq,t.codreq,
+        t.idreq,t.codtiptar,t.nomtiptar,t.codstak,t.nomstak,t.tarstatus,
+        t.tarpri,t.tarinipre,t.tarfinpre,t.tarfinreal,t.numhortaraju,
+        t.tarfinpreaju,t.numhortar)">
+        ver mais
+      </button> 
+      </ion-item>
+    </ion-thumbnail>   
+  </ion-list>
+  
+  <!--Criacao de botao para add novas tarefas-->
+  <div id ="mais">
+    <button ion-button round color="primary" (click)="novaTarefa()">
+      <ion-icon name="add"></ion-icon>
+    </button> 
+  </div>
+</ion-content>

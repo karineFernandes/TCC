@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Requisitos } from '../../modelo/Requisitos';
+import { TarefaPage } from '../tarefa/tarefa';
 
 @IonicPage()
 @Component({
@@ -93,20 +94,9 @@ export class EditRequisitosPage {
       }
     );
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    Tarefa(){  
+      this.navCtrl.push(TarefaPage,{codRequisito:this.codreq});                
+    }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad EditRequisitosPage');

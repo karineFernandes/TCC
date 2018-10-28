@@ -84,11 +84,8 @@ export class EditProjetoPage {
     );
   }
 
-
   Sprint(){  
-    console.log("entrei aqui");
-    this.navCtrl.push(SprintPage,{codProjeto:this.codProje}); 
-                 
+    this.navCtrl.push(SprintPage,{codProjeto:this.codProje});                
   }
 
   ionViewDidLoad() {

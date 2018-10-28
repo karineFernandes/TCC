@@ -1,0 +1,112 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Editar Tarefa</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+    <ion-list>    
+      <ion-item>
+        <ion-input type="text" placeholder="nome tarefa"
+                    [(ngModel)]="nomTar" name="nomTar" value={{nomtar}}></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-input type="text" placeholder="Descrição da tarefa"
+                    [(ngModel)]="destar" name="destar" value={{desctar}}></ion-input>
+      </ion-item>
+  
+      <ion-item>
+          <ion-input type="text" placeholder="Nome requisito"
+                      [(ngModel)]="nomreq" name="nomreq" value={{nomereq}}></ion-input>
+        </ion-item>
+
+      <ion-item>
+          <ion-input type="text" placeholder="Codigo requisito"
+                      [(ngModel)]="codireq" name="codireq" value={{codreq}}></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input type="text" placeholder="ID requisito"
+                    [(ngModel)]="idreq" name="idreq" value={{idreq}}></ion-input>
+      </ion-item>
+      
+      <ion-item>
+        <ion-input type="text" placeholder="Codigo tipo tarefa"
+                    [(ngModel)]="coditiptar" name="coditiptar" value={{codtiptar}}></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-input type="text" placeholder="Nome tipo tarefa"
+                    [(ngModel)]="nometiptar" name="nometiptar" value={{nomtiptar}}></ion-input>
+      </ion-item>
+     
+      <ion-item>
+        <ion-input type="text" placeholder=" Codigo Stakeholder"
+                    [(ngModel)]="codistak" name="codistak" value={{codstak}}></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-input type="text" placeholder="Nome Stakeholder"
+                    [(ngModel)]="nomestak" name="nomestak" value={{nomstak}}></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-input type="text" placeholder="Status"
+                    [(ngModel)]="tarstatus" name="tarstatus" value={{tarstatus}}></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-input type="text" placeholder="Tarefa Principal"
+                    [(ngModel)]="tarepri" name="tarepri" value={{tarpri}}></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-input type="text" placeholder="Data inicio pre"
+                    [(ngModel)]="tarinicprec" name="tarinicprec" value={{tarinipre}}></ion-input>
+      </ion-item>
+      
+      <ion-item>
+        <ion-input type="text" placeholder="Data final pre"
+                    [(ngModel)]="tarfinapre" name="tarfinapre" value={{tarfinpre}}></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-input type="text" placeholder="Data final real"
+                    [(ngModel)]="tarfinreal" name="tarfinreal" value={{tarfinreal}}></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-input type="text" placeholder="Número de horas Ajuda"
+                    [(ngModel)]="numaju" name="numaju" value={{numhortaraju}}></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-input type="text" placeholder="Final ajuda"
+                    [(ngModel)]="tarfinpreaju" name="tarfinpreaju" value={{tarfinpreaju}}></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-input type="text" placeholder="Numero de horas"
+                    [(ngModel)]="nhoratar" name="nhoratar" value={{numhortar}}></ion-input>
+      </ion-item>
+  
+    </ion-list>
+
+  <div id="mais">
+      
+    <!--botao para alteraçao do item selecionado -->
+    <button ion-button round color="primary"(click)= "alterar(nomereq,desreq,nompro,codpro,nomspr,codspr,codfor,
+       nomtipreq,codtipreq,nomstreq,codstareq,codpro1,codspr1,idreq,numhorpre,codresp,datareq)">
+       <ion-icon name="checkmark"></ion-icon>
+    </button>
+  
+    <!--botao para exclusao do item marcado -->
+    <button ion-button round color="danger"(click)= "excluir()">
+      <ion-icon name="trash"></ion-icon>
+    </button>
+  </div>
+</ion-content>
