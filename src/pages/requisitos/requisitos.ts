@@ -25,11 +25,10 @@ export class RequisitosPage {
     this._http.get<Requisitos[]>('/api/GenericRestService/rest/querytojson/LISTREQUISITO/null')
       .subscribe(
         (requisito)=>{
-          console.log("eu1:"+requisito);
+         // console.log("eu1:"+requisito);
             this.requisito=requisito.filter((r)=>{
               //console.log("r:",r);
               if(r.codspr==this.codSPrint+" "){return true}}); 
-
         }
       );    
   }

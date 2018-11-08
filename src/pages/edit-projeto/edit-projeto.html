@@ -2,12 +2,13 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Projeto</ion-title>
+    <ion-title>Editar Projeto</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 <ion-content padding>
+
   <ion-list>
     <ion-item>
       <ion-input type="text" placeholder="Nome do Projeto"
@@ -36,7 +37,8 @@
 
     <ion-item>
       <ion-input type="text" placeholder="Codigo do Processo de desenvolvimento"
-                  [(ngModel)]="codprodes" name="codprodes" value={{codProcessoDesenvol}}></ion-input>
+                [(ngModel)]="codprodes" name="codprodes" value={{codProcessoDesenvol}}></ion-input>
+          <!--<button ion-button clear item-end (click)="EditCodPD()">Código</button> -->
     </ion-item>
   </ion-list> 
 
@@ -45,17 +47,14 @@
       Sprint
     </button>
 
-    <!--botao para alteraçao do item selecionado -->
+    
     <button ion-button round color="primary"(click)= "alterar(nomPro,despro,analiseviab,escopo,nomPro1,codprodes)">
       <ion-icon name="checkmark"></ion-icon>
     </button>
 
-    <!--botao para exclusao do item marcado -->
+
     <button ion-button round color="danger"(click)= "excluir()">
         <ion-icon name="trash"></ion-icon>
     </button>
-
-    
-
   </div>
 </ion-content>

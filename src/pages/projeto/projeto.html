@@ -20,15 +20,16 @@
           Codigo processo de desenvolvimento:{{projeto.codprodes}}
         </p>
         <button ion-button clear item-end (click)="selecionaProjeto(projeto.codpro,projeto.nompro,
-          projeto.despro,projeto.analiseviab,projeto.escopo,projeto.nompro1,projeto.codprodes)">
+        projeto.despro,projeto.analiseviab,projeto.escopo,projeto.nompro1,projeto.codprodes)">
           ver mais
         </button> 
       </ion-item>
     </ion-thumbnail>   
   </ion-list>
   
-  <!--Criacao de botao para add novos requisitos-->
-  <div id ="mais"><button ion-button round color="primary" 
+  <!--Criacao de botao para add novos requisitos -->
+  <div id ="mais">
+    <button ion-button round color="primary" 
     (click)="novoProjeto()">
     <ion-icon name="add"></ion-icon>
   </button> 

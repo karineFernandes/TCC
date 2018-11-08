@@ -31,13 +31,15 @@ export class ProjetoPage {
     novoProjeto(nome){ 
       this.navCtrl.push(EditProjetoPage,{});   
     }
-  
+
+   
+
     selecionaProjeto(cod,nome,dp,av,e,np1,cpd){
       let cn = parseInt(cod);
       this.navCtrl.push(EditProjetoPage,{codpro:cn,nompro:nome,despro:dp,analiseviab:av,escopo:e,
       nompro1:np1,codprodes:cpd});
     }
-    
+  
     ionViewDidLoad() {
       console.log('ionViewDidLoad ProjetoPage');
     }
