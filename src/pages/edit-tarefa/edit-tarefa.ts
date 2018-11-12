@@ -56,12 +56,12 @@ export class EditTarefaPage {
    
   } 
    
-   alterar(codtar,nomtar,desctar,nomereq,codreq,idreq,codtiptar,nomtiptar,codstak,nomstak,tarstatus,
-  tarpri,tarinipre,tarfinpre,tarfinreal,numhortaraju,tarfinpreaju,humhortar){
+   alterar(nomtar,desctar,nomereq,codreq,idreq,codtiptar,nomtiptar,codstak,nomstak,tarstatus,
+  tarpri,tarinipre,tarfinpre,tarfinreal,numhortaraju,tarfinpreaju,numhortar){
   
       if(this.navParams.get('codigotar')){
       this._http.get('/api/GenericRestService/rest/querytojson/UPDTAREFA/'+codreq+'&'+codstak+'&'+nomtar+
-      '&'+desctar+'&'+humhortar+'&'+tarpri+'&'+tarinipre+'&'+tarfinpre+'&'+
+      '&'+desctar+'&'+numhortar+'&'+tarpri+'&'+tarinipre+'&'+tarfinpre+'&'+
     codtiptar+'&'+tarstatus+'&'+tarfinreal+'&'+numhortaraju+'&'+tarfinpreaju+'&'+this.codtar)
       .subscribe(
         (tar)=>{
@@ -72,7 +72,7 @@ export class EditTarefaPage {
 
     }else{
       this._http.get('/api/GenericRestService/rest/querytojson/INSTAREFA/'+codreq+'&'+codstak+'&'+nomtar+
-      '&'+desctar+'&'+humhortar+'&'+tarpri+'&'+tarinipre+'&'+tarfinpre+'&'+
+      '&'+desctar+'&'+numhortar+'&'+tarpri+'&'+tarinipre+'&'+tarfinpre+'&'+
     codtiptar+'&'+tarstatus+'&'+tarfinreal+'&'+numhortaraju+'&'+tarfinpreaju)
       .subscribe(
         (tar)=>{

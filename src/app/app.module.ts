@@ -30,6 +30,16 @@ import { EditSprintPage } from '../pages/edit-sprint/edit-sprint';
 import { TarefaPage } from '../pages/tarefa/tarefa';
 import { EditTarefaPage } from '../pages/edit-tarefa/edit-tarefa';
 
+import { GrePage } from '../pages/gre/gre';
+
+import { Gre1Page } from '../pages/gre1/gre1';
+import { Gre2Page } from '../pages/gre2/gre2';
+import { Gre3Page } from '../pages/gre3/gre3';
+import { Gre4Page } from '../pages/gre4/gre4';
+import { Gre5Page } from '../pages/gre5/gre5';
+import { CriterioPage } from '../pages/criterio/criterio';
+import { EditCriterioPage } from '../pages/edit-criterio/edit-criterio';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -45,7 +55,10 @@ import { EditTarefaPage } from '../pages/edit-tarefa/edit-tarefa';
     StakeholderPage,
     EditstakeholderPage,
     SprintPage,
-    EditSprintPage,TarefaPage,EditTarefaPage  
+    EditSprintPage,TarefaPage,EditTarefaPage,GrePage,
+    Gre1Page,Gre2Page,Gre3Page,Gre4Page,Gre5Page,
+    CriterioPage,EditCriterioPage
+
   ],
   imports: [
     BrowserModule,
@@ -67,7 +80,9 @@ import { EditTarefaPage } from '../pages/edit-tarefa/edit-tarefa';
     StakeholderPage,
     EditstakeholderPage,
     SprintPage,
-    EditSprintPage,TarefaPage,EditTarefaPage  
+    EditSprintPage,TarefaPage,EditTarefaPage,GrePage,
+    Gre1Page,Gre2Page,Gre3Page,Gre4Page,Gre5Page,
+    CriterioPage,EditCriterioPage  
   ],
   providers: [
     StatusBar,

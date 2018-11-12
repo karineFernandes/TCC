@@ -1,0 +1,21 @@
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>GRE1</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+ 
+  <ion-list>
+    <ion-item *ngFor="let s of stake">
+        <ion-label>{{s.nomstak}}</ion-label>
+           <ion-checkbox [(ngModel)]="s.nomstak" 
+                (ionChange)="marcado()">
+           </ion-checkbox>            
+      </ion-item> 
+  </ion-list>  
+  <button ion-button round color="secondary"(click)="Stakeholder()">Stakeholder</button>
+  <button ion-button round color="secondary"(click)="Home()">Home</button>
+</ion-content>

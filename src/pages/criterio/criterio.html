@@ -1,0 +1,30 @@
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>Critério</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <ion-thumbnail item-start>
+        <ion-item ion-item *ngFor="let cri of crite">           
+          <h2>Critério:{{cri.nomcri}}</h2>
+          <p>   
+            Descrição: {{cri.descri}}
+          </p>      
+          <button ion-button clear item-end 
+          (click)="selecionaCriterio(cri.descri,cri.nomcri,cri.codcri)">Ver mais</button> 
+      </ion-item>     
+    </ion-thumbnail>  
+  </ion-list>
+  
+  <!--Criacao de botao para add novos requisitos-->
+  <div id ="mais"><button ion-button round color="primary" 
+    (click)="novoCriterio()">
+    <ion-icon name="add"></ion-icon>
+  </button> 
+  </div>
+
+</ion-content>

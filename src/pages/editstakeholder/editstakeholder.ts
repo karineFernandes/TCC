@@ -35,6 +35,7 @@ export class EditstakeholderPage {
       .subscribe(
         (req)=>{
           console.log(req);
+          this.navCtrl.pop();
           this.navCtrl.pop();         
         }
       );
@@ -45,6 +46,7 @@ export class EditstakeholderPage {
       .subscribe(
         (req)=>{
           console.log(req);
+          this.navCtrl.pop();
           this.navCtrl.pop();         
         }
       );
@@ -57,7 +59,8 @@ export class EditstakeholderPage {
     .subscribe(
       (req)=>{
         console.log(req);
-        this.navCtrl.pop();         
+        this.navCtrl.pop(); 
+        this.navCtrl.pop();        
       }
     );
   }

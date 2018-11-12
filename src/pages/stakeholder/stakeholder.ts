@@ -11,7 +11,7 @@ import { EditstakeholderPage } from '../editstakeholder/editstakeholder';
   templateUrl: 'stakeholder.html',
 })
 export class StakeholderPage {
-   public stake:STAKEHOLDER[];
+  public stake:STAKEHOLDER[];
 
   constructor(public navCtrl: NavController, 
       public navParams: NavParams,

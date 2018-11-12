@@ -1,0 +1,34 @@
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>Editar Criterio</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>    
+    <ion-item>
+      <ion-input type="text" placeholder="nome criterio"
+                  [(ngModel)]="nomecrite" name="nomecrite" value={{nomCrite}}></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input type="text" placeholder="Descrição do criterio"
+                  [(ngModel)]="descriter" name="descriter" value={{descCriterio}}></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <div id="mais">   
+    <!--botao para alteraçao do item selecionado -->
+    <button ion-button round color="primary"(click)= "alterar(nomecrite,descriter)">
+       <ion-icon name="checkmark"></ion-icon>
+    </button>
+  
+    <!--botao para exclusao do item marcado -->
+    <button ion-button round color="danger"(click)= "excluir()">
+      <ion-icon name="trash"></ion-icon>
+    </button>
+  </div>
+
+</ion-content>

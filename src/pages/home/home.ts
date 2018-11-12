@@ -39,44 +39,4 @@ export class HomePage {
     this.navCtrl.push(RequisitosPage);
   }
 
-  Stakeholder(){
-    this.navCtrl.push(StakeholderPage);
-  }
-
-  Sprint(){  
-    const prompt = this.alertCtrl.create({
-      title: 'Codigo Projeto ',
-      message: "Digite o código do projeto que queira ver na Sprint",
-      inputs: [
-        {
-          name: 'codigo',
-          placeholder: 'codigo'
-        },
-      ],
-      buttons: [
-        {
-          text: 'Cancelar',
-          handler: data => {
-            console.log('Cancel clicked');
-          }
-        },
-        {
-          text: 'Salvar',
-          handler: data => {
-            console.log('Saved clicked');
-            this.navCtrl.push(SprintPage,{codinsClient:data.codigo});            
-          }
-          
-        }
-      ]
-    });
-    prompt.present();
-
-    
-  }
-
-
-
-
-
 }
