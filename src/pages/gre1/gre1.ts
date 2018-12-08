@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams} from 'ionic-angular';
-import { STAKEHOLDER } from "../../modelo/STAKE";
 import { HttpClient } from '@angular/common/http';
-import { HomePage } from '../home/home';
-import { StakeholderPage } from '../stakeholder/stakeholder';
+import { AceiteReq } from '../../modelo/Aceite';
+import { EditAceitereqPage } from '../edit-aceitereq/edit-aceitereq';
+import { StakeholderPage } from '../stakeholder/stakeholder'
 
 @IonicPage()
 @Component({
@@ -11,33 +11,38 @@ import { StakeholderPage } from '../stakeholder/stakeholder';
   templateUrl: 'gre1.html',
 })
 export class Gre1Page {
-
-  public stake:STAKEHOLDER[];
-  requisito:number;
-  select:boolean;
+  public acei:AceiteReq[];
+  codRequisito:number;
 
   constructor(public navCtrl: NavController, 
-      public navParams: NavParams,
-      private _http:HttpClient) {
-        this.requisito = this.navParams.get('codigoRequisito');//informaçao passada pela tela requisito
-        this._http.get<STAKEHOLDER[]>('/api/GenericRestService/rest/querytojson/LISTSTAKEHOLDER/null')
-          .subscribe(
-            (stake)=>{
-              this.stake=stake;
-             }
-      );
+    public navParams: NavParams, 
+    private _http:HttpClient) {
+    this.codRequisito=this.navParams.get('codigoRequisito');
+
+    this._http.get<AceiteReq[]>('/api/GenericRestService/rest/querytojson/LISTACEITEREQ/'+this.codRequisito)
+      .subscribe(
+        (acei)=>{
+          this.acei=acei;
+        }
+      );    
   }
 
-  marcado(){
-    this.stake.map(select=>{
-      console.log(select.nomstak);
+  getAceite(){
+    return this.acei;
+  }
  
-    });  
+  novoAceite(){ 
+    this.navCtrl.push(EditAceitereqPage,{});   
   }
 
-  Stakeholder(){
-    this.navCtrl.push(StakeholderPage);
+  //A ordem que e passado os parametros do selecionarRequisitos na pagina de html importa
+  //Manter a mesma ordem nesse requisito
+  selecionaAceite(codRequisito,codistake, dataA){
+    let cods = parseInt(codistake);
+    //Os nomes escolhidos deverao ser usados na pagina de edicao ao ser passados como parametros
+    this.navCtrl.push(EditAceitereqPage,{coreq:this.codRequisito,coste:cods,data:dataA});                                   
   }
+
   Home(){
     this.navCtrl.pop(); 
     this.navCtrl.pop();
@@ -48,9 +53,11 @@ export class Gre1Page {
     this.navCtrl.pop();
     this.navCtrl.pop(); 
   }
-  
-  
 
+  Stakeholder(){
+    this.navCtrl.push(StakeholderPage,{});  
+  }
+ 
   ionViewDidLoad() {
     console.log('ionViewDidLoad Gre1Page');
   }

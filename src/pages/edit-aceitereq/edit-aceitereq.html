@@ -1,0 +1,28 @@
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>Editar Aceite do Requisito</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item>
+    <ion-label floating>Codigo Requisito</ion-label>
+    <ion-input type="text" [(ngModel)]="codigoReq"></ion-input>
+  </ion-item>
+
+<ion-item>
+  <ion-label floating>Data</ion-label>
+  <ion-input type="text" [(ngModel)]="dataAcei"></ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label floating>Fornecedor</ion-label>
+  <ion-select  [(ngModel)]= "stake">
+    <ion-option  *ngFor="let s of stake"
+    value="{{codigoStake}}" multiple="true">
+    {{s.nomstak}}
+  </ion-option>
+  </ion-select>
+</ion-item>
+</ion-content>

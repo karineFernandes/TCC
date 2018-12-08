@@ -1,0 +1,27 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>CheckList</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <ion-list>
+        <ion-thumbnail item-start>
+            <ion-item ion-item *ngFor="let c of check">           
+              <h2>Codigo CheckList:{{c.codchk}}</h2>
+              <p>   
+                Codigo Projeto:{{c.codpro}}<br>
+                Data:{{c.datchk}}
+              </p>      
+              <button ion-button clear item-end 
+              (click)="selecionaCheck(c.codchk,c.codpro,c.datchk)">Ver mais</button> 
+          </ion-item>     
+        </ion-thumbnail>  
+      </ion-list>
+
+</ion-content>

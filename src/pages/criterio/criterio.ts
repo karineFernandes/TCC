@@ -35,7 +35,7 @@ export class CriterioPage {
 
   //A ordem que e passado os parametros do selecionarRequisitos na pagina de html importa
   //Manter a mesma ordem nesse requisito
-  selecionaRequisito(descrit,nomecri,codcrit){
+  selecionaCriterio(descrit,nomecri,codcrit){
     let codcrite = parseInt(codcrit);
     //Os nomes escolhidos deverao ser usados na pagina de edicao ao ser passados como parametros
     this.navCtrl.push(EditCriterioPage,{codigo:codcrite, nomecrite:nomecri, descriter:descrit});                                   

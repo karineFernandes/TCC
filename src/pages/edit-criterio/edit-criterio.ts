@@ -25,7 +25,7 @@ export class EditCriterioPage {
   
    alterar(nomCrite,descCriterio){  
       if(this.navParams.get('codigo')){
-      this._http.get('/api/GenericRestService/rest/querytojson/UPDCRITERIO/')
+      this._http.get('/api/GenericRestService/rest/querytojson/UPDCRITERIOS/'+nomCrite+"&"+descCriterio+"&"+this.codigoCri)
       .subscribe(
         (cri)=>{
           console.log(cri);
@@ -34,7 +34,7 @@ export class EditCriterioPage {
       );
 
     }else{
-      this._http.get('/api/GenericRestService/rest/querytojson/INSCRITERIO/')
+      this._http.get('/api/GenericRestService/rest/querytojson/INSCRITERIOS/'+nomCrite+"&"+descCriterio)
       .subscribe(
         (cri)=>{
           console.log(cri);
@@ -45,8 +45,8 @@ export class EditCriterioPage {
   }
 
   excluir(){ 
-    let id = this.navParams.get('codigo');;
-    this._http.get('/api/GenericRestService/rest/querytojson/DELCRITERIO/'+id)
+    let id = this.navParams.get('codigo');
+    this._http.get('/api/GenericRestService/rest/querytojson/DELCRITERIOS/'+id)
     .subscribe(
       (req)=>{
         console.log(req);

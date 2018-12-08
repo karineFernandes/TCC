@@ -100,7 +100,7 @@ export class EditRequisitosPage {
     }
 
     GRE(){  
-      this.navCtrl.push(GrePage,{codRequisito:this.codreq});                
+      this.navCtrl.push(GrePage,{codRequisito:this.codreq,codpro:this.codpro});                
     } 
 
 

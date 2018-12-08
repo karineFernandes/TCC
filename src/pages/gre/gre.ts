@@ -13,10 +13,13 @@ import { Gre5Page } from '../gre5/gre5';
 })
 export class GrePage {
   codrequi:number;
+  codProje:number;
 
   constructor(public navCtrl: NavController,
      public navParams: NavParams) {
-      this.codrequi = this.navParams.get('codRequisito');    
+      this.codrequi = this.navParams.get('codRequisito');
+      this.codProje = this.navParams.get('codpro');    
+      console.log("Proje:" +this.codProje); 
   }
 
   GRE1(){
@@ -24,7 +27,7 @@ export class GrePage {
   }
 
   GRE2(){
-    this.navCtrl.push(Gre2Page);
+    this.navCtrl.push(Gre2Page,{codProjeto: this.codProje,codigoRequisito:this.codrequi});
   }
 
   GRE3(){

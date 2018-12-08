@@ -9,13 +9,27 @@
 <ion-content padding>
  
   <ion-list>
-    <ion-item *ngFor="let s of stake">
-        <ion-label>{{s.nomstak}}</ion-label>
-           <ion-checkbox [(ngModel)]="s.nomstak" 
-                (ionChange)="marcado()">
-           </ion-checkbox>            
-      </ion-item> 
-  </ion-list>  
+    <ion-thumbnail item-start>
+        <ion-item ion-item *ngFor="let a of acei">           
+          <h2>Aceite Requisito:{{a.codreq}}</h2>
+          <p>   
+            Stakeholder:{{a.codstak}}<br>
+            Data:{{a.dataace}}
+          </p>      
+          <button ion-button clear item-end 
+          (click)="selecionaAceite(a.codigoRequisito,
+          a.codstak,a.dataace)">Ver mais</button> 
+      </ion-item>     
+    </ion-thumbnail>  
+  </ion-list>
+
   <button ion-button round color="secondary"(click)="Stakeholder()">Stakeholder</button>
   <button ion-button round color="secondary"(click)="Home()">Home</button>
+
+<div id ="mais"><button ion-button round color="primary" 
+  (click)="novoAceite()">
+  <ion-icon name="add"></ion-icon>
+</button> 
+</div>
+
 </ion-content>

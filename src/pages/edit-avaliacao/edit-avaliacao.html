@@ -1,0 +1,63 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>EditAvaliacao</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-input type="text" placeholder="Codigo CheckList"
+                  [(ngModel)]="codCheckList" name="codCheckList" value={{codchk}}></ion-input>
+    </ion-item> 
+
+    <ion-item>
+      <ion-input type="text" placeholder="Codigo Requisito"
+                  [(ngModel)]="codigoRequisito" name="codigoRequisito" value={{codreq}}></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input type="text" placeholder="Codigo Criterio"
+                  [(ngModel)]="codcrite" name="codcrite" value={{codcrit}}></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input type="text" placeholder="Codigo Projeto"
+                  [(ngModel)]="codprojeto" name="codprojeto" value={{codProj}}></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input type="text" placeholder="Nota"
+                  [(ngModel)]="nota" name="nota" value={{nota}}></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input type="text" placeholder="Comentario"
+                  [(ngModel)]="comentario" name="comentario" value={{coment}}></ion-input>
+    </ion-item>
+
+</ion-list> 
+
+  <div id="mais">
+    <button ion-button round color="secondary"
+    (click)="CheckList()">CheckList</button>
+  
+    <button ion-button round color="secondary"
+    (click)="Participantes()">Participantes</button>
+  
+    <button ion-button round color="secondary"
+    (click)="Criterios()">Criterios</button>
+
+    <button ion-button round color="primary"(click)= "alterar(nomPro,despro,analiseviab,escopo,nomPro1,codprodes)">
+      <ion-icon name="checkmark"></ion-icon>
+    </button>
+
+    <button ion-button round color="danger"(click)= "excluir()">
+        <ion-icon name="trash"></ion-icon>
+    </button>
+  </div>  
+</ion-content>

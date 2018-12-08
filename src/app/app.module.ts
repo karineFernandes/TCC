@@ -29,16 +29,23 @@ import { EditSprintPage } from '../pages/edit-sprint/edit-sprint';
 //CRUD Tarefa
 import { TarefaPage } from '../pages/tarefa/tarefa';
 import { EditTarefaPage } from '../pages/edit-tarefa/edit-tarefa';
-
+//Paginas de resultados
 import { GrePage } from '../pages/gre/gre';
-
 import { Gre1Page } from '../pages/gre1/gre1';
 import { Gre2Page } from '../pages/gre2/gre2';
 import { Gre3Page } from '../pages/gre3/gre3';
 import { Gre4Page } from '../pages/gre4/gre4';
 import { Gre5Page } from '../pages/gre5/gre5';
+//CRUD Criterio 
 import { CriterioPage } from '../pages/criterio/criterio';
 import { EditCriterioPage } from '../pages/edit-criterio/edit-criterio';
+//CRUD Aceite
+import { EditAceitereqPage } from '../pages/edit-aceitereq/edit-aceitereq';
+//CRUD Avaliacao
+import { EditAvaliacaoPage } from '../pages/edit-avaliacao/edit-avaliacao';
+
+import { CheckListPage } from '../pages/check-list/check-list';
+import { ParticipantesPage } from '../pages/participantes/participantes';
 
 @NgModule({
   declarations: [
@@ -57,7 +64,8 @@ import { EditCriterioPage } from '../pages/edit-criterio/edit-criterio';
     SprintPage,
     EditSprintPage,TarefaPage,EditTarefaPage,GrePage,
     Gre1Page,Gre2Page,Gre3Page,Gre4Page,Gre5Page,
-    CriterioPage,EditCriterioPage
+    CriterioPage,EditCriterioPage,EditAceitereqPage,EditAvaliacaoPage,
+    CheckListPage,ParticipantesPage
 
   ],
   imports: [
@@ -82,7 +90,8 @@ import { EditCriterioPage } from '../pages/edit-criterio/edit-criterio';
     SprintPage,
     EditSprintPage,TarefaPage,EditTarefaPage,GrePage,
     Gre1Page,Gre2Page,Gre3Page,Gre4Page,Gre5Page,
-    CriterioPage,EditCriterioPage  
+    CriterioPage,EditCriterioPage,EditAceitereqPage,EditAvaliacaoPage,
+    CheckListPage,ParticipantesPage  
   ],
   providers: [
     StatusBar,

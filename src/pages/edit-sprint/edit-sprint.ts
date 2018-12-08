@@ -69,7 +69,6 @@ export class EditSprintPage {
         this.navCtrl.pop();       
       }
     );
-
   }
 
   Requisitos(){  

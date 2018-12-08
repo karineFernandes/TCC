@@ -8,8 +8,6 @@ import { ListTiporequisitoPage } from '../list-tiporequisito/list-tiporequisito'
 import { StatusRequisitoPage } from '../../pages/status-requisito/status-requisito';
 import { ProjetoPage } from '../../pages/projeto/projeto'
 import { RequisitosPage } from '../../pages/requisitos/requisitos';
-import { StakeholderPage } from '../../pages/stakeholder/stakeholder';
-import { SprintPage } from '../../pages/sprint/sprint';
 
 
 @Component({
