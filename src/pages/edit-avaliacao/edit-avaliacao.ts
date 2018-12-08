@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { CriterioPage } from '../criterio/criterio';
 import { CheckListPage } from '../check-list/check-list';
 import { ParticipantesPage } from '../participantes/participantes';
 import { Avaliacao } from '../../modelo/Avaliacao';
@@ -17,7 +16,7 @@ export class EditAvaliacaoPage {
   codreq:number;
   codchk:number;
   codcrit:number;
-  codProj:number;//ter acesso ao codpro
+  codProje:number;//ter acesso ao codpro
   nota:String;
   comentario:String;
 
@@ -28,14 +27,14 @@ export class EditAvaliacaoPage {
       this.codchk = this.navParams.get('codCheckList');
       this.codreq = this.navParams.get('codRequisito');
       this.codcrit = this.navParams.get('codcrite');
-      this.codProj = this.navParams.get('codprojeto');
       this.nota = this.navParams.get('nota');
       this.comentario = this.navParams.get('coment');
+      this.codProje = this.navParams.get('codProjeto');
   }
 
-  alterar(){
-    if(this.navParams.get('codisprin')){
-    this._http.get('/api/GenericRestService/rest/querytojson//')
+  alterar(codchk,codreq,codcrit,nota,coment){
+    if(this.navParams.get('codCheckList')){
+    this._http.get('/api/GenericRestService/rest/querytojson/UPDAVALIACAOREQ/'+codreq+'&'+codcrit+'&'+nota+'&'+coment+'&'+codchk)
     .subscribe(
       (aval)=>{
         console.log(aval);
@@ -44,7 +43,7 @@ export class EditAvaliacaoPage {
     );
 
   }else{
-    this._http.get('/api/GenericRestService/rest/querytojson//')
+    this._http.get('/api/GenericRestService/rest/querytojson/INSAVALIACAOREQ/'+codchk+'&'+codreq+'&'+codcrit+'&'+nota+'&'+coment)
       .subscribe(
         (aval)=>{
           console.log(aval);
@@ -55,9 +54,9 @@ export class EditAvaliacaoPage {
 }
 
 excluir(){ 
-  let id = this.navParams.get('codisprin');
-  console.log("codStaReq:"+id);
-  this._http.get('/api/GenericRestService/rest/querytojson/DELSPRINT/'+id)
+  let id = this.navParams.get('codCheckList');
+  console.log("CHECKLISTDEL:"+id);
+  this._http.get('/api/GenericRestService/rest/querytojson/DELAVALIACAOREQ/'+id+'&'+this.codreq+'&'+this.codcrit)
   .subscribe(
     (aval)=>{
       console.log(aval);
@@ -67,20 +66,12 @@ excluir(){
 
 }
 
-
-
-
-
-  Criterios(){
-    this.navCtrl.push(CriterioPage);
-  }
-
   CheckList(){
-    this.navCtrl.push(CheckListPage,{codproo:this.codProj,codigocheck:this.codchk});
+    this.navCtrl.push(CheckListPage,{codProjeto:this.codProje,codigocheck:this.codchk});
   }
 
   Participantes(){
-    this.navCtrl.push(ParticipantesPage);
+    this.navCtrl.push(ParticipantesPage,{codCheck:this.codchk});
   }
 
   ionViewDidLoad() {

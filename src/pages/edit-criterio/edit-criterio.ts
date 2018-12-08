@@ -11,16 +11,18 @@ import { Criterios } from '../../modelo/Criterios';
 export class EditCriterioPage {
   public cri:Criterios;
   
-  codigoCri = this.navParams.get('codigo');
-  nomCrite = this.navParams.get('nomecrite');
-  descCriterio = this.navParams.get('descriter');
+  codigoCri:number;
+  nomCrite:String;
+  descCriterio:String;
   
   constructor(public navCtrl: NavController, 
     public navParams: NavParams,
     private _http:HttpClient) {
      //No navparams usar os mesmos nomes criados quando passado da tela de requisito 
      //para a tela de edicao 
-    
+     this.codigoCri = this.navParams.get('codigo');
+     this.nomCrite = this.navParams.get('nomecrite');
+     this.descCriterio = this.navParams.get('descriter');
   } 
   
    alterar(nomCrite,descCriterio){  
@@ -48,8 +50,8 @@ export class EditCriterioPage {
     let id = this.navParams.get('codigo');
     this._http.get('/api/GenericRestService/rest/querytojson/DELCRITERIOS/'+id)
     .subscribe(
-      (req)=>{
-        console.log(req);
+      (cri)=>{
+        console.log(cri);
         this.navCtrl.pop();         
       }
     );

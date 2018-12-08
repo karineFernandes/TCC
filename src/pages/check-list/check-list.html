@@ -16,10 +16,17 @@
               <h2>Codigo CheckList:{{c.codchk}}</h2>
               <p>   
                 Codigo Projeto:{{c.codpro}}<br>
+                Nome do Projeto:{{c.nompro}}<br>
+                Descrição do Projeto:{{c.descpro}}<br>
+                Analise de viabilidade:{{c.analiseviab}}<br>
+                Escopo:{{c.escopo}}<br>
+                Projeto1:{{c.codpro1}}<br>
+                Codigo proce. de desenv.:{{c.codprodes}}<br>
                 Data:{{c.datchk}}
               </p>      
               <button ion-button clear item-end 
-              (click)="selecionaCheck(c.codchk,c.codpro,c.datchk)">Ver mais</button> 
+              (click)="selecionaCheck(c.codchk,c.codpro,c.nompro,c.descpro,
+              c.analiseviab,c.escopo,c.codpro1,c.codprodes,c.datchk)">Ver mais</button> 
           </ion-item>     
         </ion-thumbnail>  
       </ion-list>

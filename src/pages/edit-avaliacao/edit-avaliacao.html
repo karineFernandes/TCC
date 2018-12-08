@@ -26,11 +26,6 @@
     </ion-item>
 
     <ion-item>
-      <ion-input type="text" placeholder="Codigo Projeto"
-                  [(ngModel)]="codprojeto" name="codprojeto" value={{codProj}}></ion-input>
-    </ion-item>
-
-    <ion-item>
       <ion-input type="text" placeholder="Nota"
                   [(ngModel)]="nota" name="nota" value={{nota}}></ion-input>
     </ion-item>
@@ -43,16 +38,13 @@
 </ion-list> 
 
   <div id="mais">
-    <button ion-button round color="secondary"
+    <button ion-button round color="dark"
     (click)="CheckList()">CheckList</button>
   
-    <button ion-button round color="secondary"
+    <button ion-button round color="dark"
     (click)="Participantes()">Participantes</button>
-  
-    <button ion-button round color="secondary"
-    (click)="Criterios()">Criterios</button>
 
-    <button ion-button round color="primary"(click)= "alterar(nomPro,despro,analiseviab,escopo,nomPro1,codprodes)">
+    <button ion-button round color="primary"(click)= "alterar(codCheckList,codigoRequisito,codcrite,nota,comentario)">
       <ion-icon name="checkmark"></ion-icon>
     </button>
 

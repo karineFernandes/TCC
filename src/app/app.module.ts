@@ -46,6 +46,8 @@ import { EditAvaliacaoPage } from '../pages/edit-avaliacao/edit-avaliacao';
 
 import { CheckListPage } from '../pages/check-list/check-list';
 import { ParticipantesPage } from '../pages/participantes/participantes';
+import { EditCheckListPage } from '../pages/edit-check-list/edit-check-list';
+import { EditParticipantesPage } from '../pages/edit-participantes/edit-participantes'
 
 @NgModule({
   declarations: [
@@ -65,7 +67,7 @@ import { ParticipantesPage } from '../pages/participantes/participantes';
     EditSprintPage,TarefaPage,EditTarefaPage,GrePage,
     Gre1Page,Gre2Page,Gre3Page,Gre4Page,Gre5Page,
     CriterioPage,EditCriterioPage,EditAceitereqPage,EditAvaliacaoPage,
-    CheckListPage,ParticipantesPage
+    CheckListPage,ParticipantesPage,EditCheckListPage,EditParticipantesPage
 
   ],
   imports: [
@@ -90,8 +92,9 @@ import { ParticipantesPage } from '../pages/participantes/participantes';
     SprintPage,
     EditSprintPage,TarefaPage,EditTarefaPage,GrePage,
     Gre1Page,Gre2Page,Gre3Page,Gre4Page,Gre5Page,
-    CriterioPage,EditCriterioPage,EditAceitereqPage,EditAvaliacaoPage,
-    CheckListPage,ParticipantesPage  
+    CriterioPage,EditCriterioPage,EditAceitereqPage,
+    EditAvaliacaoPage,EditCheckListPage,
+    CheckListPage,ParticipantesPage,EditParticipantesPage  
   ],
   providers: [
     StatusBar,

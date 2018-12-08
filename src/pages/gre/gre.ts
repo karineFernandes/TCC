@@ -19,7 +19,6 @@ export class GrePage {
      public navParams: NavParams) {
       this.codrequi = this.navParams.get('codRequisito');
       this.codProje = this.navParams.get('codpro');    
-      console.log("Proje:" +this.codProje); 
   }
 
   GRE1(){
@@ -27,7 +26,7 @@ export class GrePage {
   }
 
   GRE2(){
-    this.navCtrl.push(Gre2Page,{codProjeto: this.codProje,codigoRequisito:this.codrequi});
+    this.navCtrl.push(Gre2Page,{codProjeto:this.codProje,codigoRequisito:this.codrequi});
   }
 
   GRE3(){

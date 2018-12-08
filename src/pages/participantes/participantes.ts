@@ -1,12 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the ParticipantesPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { HttpClient } from '@angular/common/http';
+import { ParticipantesCheckList } from '../../modelo/ParticipantesCheckList';
+import { EditParticipantesPage } from '../edit-participantes/edit-participantes';
 
 @IonicPage()
 @Component({
@@ -15,7 +11,34 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class ParticipantesPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  public parti:ParticipantesCheckList[];
+  codchk:number;
+
+  constructor(public navCtrl: NavController, 
+    public navParams: NavParams, 
+    private _http:HttpClient) {
+
+    this.codchk = this.navParams.get('codCheck'); 
+
+    this._http.get<[ParticipantesCheckList]>('/api/GenericRestService/rest/querytojson/LISTPARTICIPCHEKLISTREQUISITOS/'+this.codchk)
+      .subscribe(
+        (parti)=>{
+          this.parti=parti;
+        }
+      );    
+  }
+
+  getCriterios(){
+    return this.parti;
+  }
+ 
+  novoParticipante(nomestake){ 
+   // this.navCtrl.push(EditCriterioPage,{});   
+  }
+
+  selecionaParticipante(codchk,codstak,nomstak,observ){
+    //Os nomes escolhidos deverao ser usados na pagina de edicao ao ser passados como parametros
+    this.navCtrl.push(EditParticipantesPage,{codcheck:codchk, codstake:codstak,nomestake:nomstak,obs:observ});                                   
   }
 
   ionViewDidLoad() {

@@ -2,9 +2,6 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { HttpClient } from '@angular/common/http';
 import { CheckList } from "../../modelo/CheckList";
-
-//import { CriterioPage } from '../criterio/criterio';
-//import { ParticipantesPage } from '../participantes/participantes';
 import { EditCheckListPage } from '../edit-check-list/edit-check-list';
 
 @IonicPage()
@@ -15,14 +12,16 @@ import { EditCheckListPage } from '../edit-check-list/edit-check-list';
 export class CheckListPage {
 
   public check:CheckList[];
-  codProj:number;
+  codProje:number;
+  codcheck:number;
 
   constructor(public navCtrl: NavController, 
     public navParams: NavParams, 
     private _http:HttpClient) {
-    this.codProj = this.navParams.get('codproo');     
-
-    this._http.get<CheckList[]>('/api/GenericRestService/rest/querytojson/LISTCHECKLISTREQ/'+this.codProj+'&')
+    this.codProje = this.navParams.get('codProjeto');
+    this.codcheck = this.navParams.get('codigocheck');    
+    
+    this._http.get<CheckList[]>('/api/GenericRestService/rest/querytojson/LISTCHECKLISTREQ/'+this.codcheck+'&'+this.codProje)
       .subscribe(
         (check)=>{
           console.log(check);
@@ -39,10 +38,12 @@ export class CheckListPage {
     this.navCtrl.push(EditCheckListPage,{});   
   }
 
-  selecionaCheck(codchkl,codpro,datchk){
-    let codcheck = parseInt(codchkl);
-    let codproje = parseInt(codpro)
-    this.navCtrl.push(EditCheckListPage,{codcheckList:codcheck,codprojeto:codproje,data:datchk });
+  selecionaCheck(codchkl,codpro,nompro,descpro,analiseviab,
+    escopo,codpro1,codprodes,datchk){
+    this.navCtrl.push(EditCheckListPage,{codcheckList:codchkl,
+      codprojeto:codpro,nomepro:nompro,descripro:descpro,
+      analise:analiseviab,esco:escopo,codpro1:codpro1,
+      codprodes:codprodes,data:datchk });
   }
 
   ionViewDidLoad() {

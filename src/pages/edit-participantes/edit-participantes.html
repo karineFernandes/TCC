@@ -1,0 +1,41 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Editar Participantes</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+        <ion-input type="text" placeholder="Codigo CheckList"
+                    [(ngModel)]="codcheck" name="codcheck" value={{codigochk}}></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-input type="text" placeholder="Codigo StakeHolder"
+                    [(ngModel)]="codstake" name="codstake" value={{codigostak}}></ion-input>
+      </ion-item>
+
+    <ion-item>
+      <ion-input type="text" placeholder="Observação"
+            [(ngModel)]="obs" name="obs" value={{observacao}}></ion-input>
+    </ion-item>
+ </ion-list>
+  
+    <div id="mais">   
+      <!--botao para alteraçao do item selecionado -->
+      <button ion-button round color="primary"(click)= "alterar(codcheck,codstake,obs)">
+         <ion-icon name="checkmark"></ion-icon>
+      </button>
+    
+      <!--botao para exclusao do item marcado -->
+      <button ion-button round color="danger"(click)= "excluir()">
+        <ion-icon name="trash"></ion-icon>
+      </button>
+    </div>
+
+</ion-content>
