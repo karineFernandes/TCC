@@ -49,6 +49,15 @@ import { ParticipantesPage } from '../pages/participantes/participantes';
 import { EditCheckListPage } from '../pages/edit-check-list/edit-check-list';
 import { EditParticipantesPage } from '../pages/edit-participantes/edit-participantes'
 
+
+import { ProdutoTrabalhoPage } from '../pages/produto-trabalho/produto-trabalho';
+import { EditProdutoTrabalhoPage } from '../pages/edit-produto-trabalho/edit-produto-trabalho';
+import { EditRevisaoProTraPage } from '../pages/edit-revisao-pro-tra/edit-revisao-pro-tra';
+import { ParticipantesRevisaoPage } from '../pages/participantes-revisao/participantes-revisao';
+import { EditParticipantesRevisaoPage } from '../pages/edit-participantes-revisao/edit-participantes-revisao';
+
+
+
 @NgModule({
   declarations: [
     MyApp,
@@ -67,7 +76,10 @@ import { EditParticipantesPage } from '../pages/edit-participantes/edit-particip
     EditSprintPage,TarefaPage,EditTarefaPage,GrePage,
     Gre1Page,Gre2Page,Gre3Page,Gre4Page,Gre5Page,
     CriterioPage,EditCriterioPage,EditAceitereqPage,EditAvaliacaoPage,
-    CheckListPage,ParticipantesPage,EditCheckListPage,EditParticipantesPage
+    CheckListPage,ParticipantesPage,EditCheckListPage,EditParticipantesPage,
+    ProdutoTrabalhoPage,EditProdutoTrabalhoPage,EditRevisaoProTraPage,
+    ParticipantesRevisaoPage,EditParticipantesRevisaoPage
+    
 
   ],
   imports: [
@@ -94,7 +106,9 @@ import { EditParticipantesPage } from '../pages/edit-participantes/edit-particip
     Gre1Page,Gre2Page,Gre3Page,Gre4Page,Gre5Page,
     CriterioPage,EditCriterioPage,EditAceitereqPage,
     EditAvaliacaoPage,EditCheckListPage,
-    CheckListPage,ParticipantesPage,EditParticipantesPage  
+    CheckListPage,ParticipantesPage,EditParticipantesPage,
+    ProdutoTrabalhoPage,EditProdutoTrabalhoPage,EditRevisaoProTraPage,
+    ParticipantesRevisaoPage,EditParticipantesRevisaoPage  
   ],
   providers: [
     StatusBar,

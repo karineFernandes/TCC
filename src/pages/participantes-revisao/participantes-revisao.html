@@ -1,0 +1,31 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Participantes da Revisao</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-list>
+        <ion-thumbnail item-start>
+            <ion-item ion-item *ngFor="let pr of partiRev">           
+              <h2>Codigo Revisao:{{pr.codrev}}</h2>
+              <p>   
+                Codigo Stakeholder:{{pr.codstak}}<br>
+              </p>      
+              <button ion-button clear item-end 
+              (click)="selecionaParticipante(pr.codrev,pr.codstak)">Ver mais</button> 
+          </ion-item>     
+        </ion-thumbnail>  
+      </ion-list>
+      
+      <!--Criacao de botao para add novos requisitos-->
+      <div id ="mais"><button ion-button round color="primary" 
+        (click)="novoPT()">
+        <ion-icon name="add"></ion-icon>
+      </button> 
+    </div>
+</ion-content>

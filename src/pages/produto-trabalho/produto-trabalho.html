@@ -1,0 +1,35 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>ProdutoTrabalho</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-thumbnail item-start>
+        <ion-item ion-item *ngFor="let pt of pt">           
+          <h2>Codigo ProTra:{{pt.codprotra}}</h2>
+          <p>   
+            Nome ProTra:{{pt.nomprotra}}<br>
+            Descrição ProTra: {{pt.desprotra}}<br>
+            Codigo Stakeholder: {{pt.codstak}}<br>
+            Codigo Requisito: {{pt.codreq}}<br>
+            URL:{{pt.urlacesso}}<br> 
+            Data Emissao: {{pt.dataemiss}}
+          </p>      
+          <button ion-button clear item-end 
+          (click)="selecionaPT(pt.codprotra,pt.nomprotra,pt.desprotra,pt.codstak,pt.codreq,pt.urlacesso,pt.dataemiss)">Ver mais</button> 
+      </ion-item>     
+    </ion-thumbnail>  
+  </ion-list>
+  
+  <!--Criacao de botao para add novos requisitos-->
+  <div id ="mais"><button ion-button round color="primary" 
+    (click)="novoPT()">
+    <ion-icon name="add"></ion-icon>
+  </button> 
+  </div>
+</ion-content>

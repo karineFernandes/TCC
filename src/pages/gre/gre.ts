@@ -30,7 +30,8 @@ export class GrePage {
   }
 
   GRE3(){
-    this.navCtrl.push(Gre3Page);
+    //console.log("gre: "+this.codrequi);
+    this.navCtrl.push(Gre3Page,{codigoRequisito:this.codrequi});
   }
 
   GRE4(){

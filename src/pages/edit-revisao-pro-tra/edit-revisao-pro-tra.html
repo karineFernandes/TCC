@@ -1,0 +1,54 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Editar Revisões de Produto de Trabalho</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  <ion-list>    
+    <ion-item>
+      <ion-input type="text" placeholder="Codigo ProTra"
+                  [(ngModel)]="cpd" name="cpd" value={{codprotra}}></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input type="text" placeholder="Codigo Revisão"
+                  [(ngModel)]="codigorev" name="codigorev" value={{codrev}}></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input type="text" placeholder="Registro de Inconsistência"
+                  [(ngModel)]="regicon" name="regicon" value={{regincons}}></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input type="text" placeholder="Ações Corretivas"
+                  [(ngModel)]="acoes" name="acoes" value={{acoescorr}}></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input type="text" placeholder="Data e Hora"
+                  [(ngModel)]="data" name="data" value={{dathorrev}}></ion-input>
+    </ion-item>
+
+  </ion-list>
+
+  <div id="mais">  
+    <button ion-button round color="dark"(click)="Participantes()">
+      Participantes
+    </button> 
+    <!--botao para alteraçao do item selecionado -->
+    <button ion-button round color="primary"(click)= "alterar(cpd,codigorev,regicon,acoes,data)">
+       <ion-icon name="checkmark"></ion-icon>
+    </button>
+  
+    <!--botao para exclusao do item marcado -->
+    <button ion-button round color="danger"(click)= "excluir()">
+      <ion-icon name="trash"></ion-icon>
+    </button>
+  </div>
+
+</ion-content>

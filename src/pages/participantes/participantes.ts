@@ -33,7 +33,7 @@ export class ParticipantesPage {
   }
  
   novoParticipante(nomestake){ 
-   // this.navCtrl.push(EditCriterioPage,{});   
+   this.navCtrl.push(EditParticipantesPage,{});   
   }
 
   selecionaParticipante(codchk,codstak,nomstak,observ){

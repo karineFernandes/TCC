@@ -1,18 +1,35 @@
-<!--
-  Generated template for the Gre4Page page.
 
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
 
   <ion-navbar>
-    <ion-title>GRE4</ion-title>
+    <ion-title>Revisão do Produto de Trabalho</ion-title>
   </ion-navbar>
 
 </ion-header>
 
-
 <ion-content padding>
+  <ion-list>
+    <ion-thumbnail item-start>
+      <ion-item ion-item *ngFor="let r of rpd">
+        <h2>Codigo ProTra: {{r.codprotra}}</h2>
+        <h2>Codigo Revisao: {{r.codrev}}</h2>
+        <p> 
+          Registro de Inconsistencia: {{r.regincons}}<br>
+          Ações Corretivas: {{r.acoescorr}}<br>
+          Data e Hora: {{r.dathorrev}}
+        </p>  
+        <button ion-button clear item-end (click)="selecionaRevisao(r.codprotra,r.codrev,r.regincons,r.acoescorr,r.dathorrev)">
+          Ver mais
+        </button> 
+      </ion-item>
+    </ion-thumbnail>   
+  </ion-list>
 
+<div id ="mais">
+<button ion-button round color="primary" 
+(click)="novaRevisao()">
+<ion-icon name="add"></ion-icon>
+</button> 
+
+</div>
 </ion-content>

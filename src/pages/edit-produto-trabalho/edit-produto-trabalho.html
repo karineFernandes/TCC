@@ -1,0 +1,62 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Editar Produto de Trabalho</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-list>    
+    <ion-item>
+      <ion-input type="text" placeholder="Codigo ProTra"
+            [(ngModel)]="codp" name="codp" value={{codprotra}}></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input type="text" placeholder="Nome ProTra"
+              [(ngModel)]="nome" name="nome" value={{nomprotra}}></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input type="text" placeholder="Descrição do ProTra"
+            [(ngModel)]="descr" name="descr" value={{desprotra}}></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input type="text" placeholder="Codigo Stakeholder"
+              [(ngModel)]="cods" name="cods" value={{codstak}}></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input type="text" placeholder="Codigo Requisito"
+                [(ngModel)]="codr" name="codr" value={{codreq}}></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input type="text" placeholder="URL"
+                  [(ngModel)]="url" name="url" value={{urlacesso}}></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input type="text" placeholder="Data"
+                [(ngModel)]="datar" name="data" value={{dataemiss}}></ion-input>
+    </ion-item>  
+  </ion-list>
+    
+  <div id="mais">   
+    <!--botao para alteraçao do item selecionado -->
+    <button ion-button round color="primary"(click)= "alterar(codp,nome,descr,cods,codr,url,data)">
+      <ion-icon name="checkmark"></ion-icon>
+    </button>
+  
+    <!--botao para exclusao do item marcado -->
+    <button ion-button round color="danger"(click)= "excluir()">
+      <ion-icon name="trash"></ion-icon>
+    </button>
+  </div>
+
+</ion-content>
