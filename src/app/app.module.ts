@@ -56,7 +56,9 @@ import { EditRevisaoProTraPage } from '../pages/edit-revisao-pro-tra/edit-revisa
 import { ParticipantesRevisaoPage } from '../pages/participantes-revisao/participantes-revisao';
 import { EditParticipantesRevisaoPage } from '../pages/edit-participantes-revisao/edit-participantes-revisao';
 
-
+import { EditRasHoriPage } from '../pages/edit-ras-hori/edit-ras-hori';
+import { EditRasVerPage } from '../pages/edit-ras-ver/edit-ras-ver'; 
+import { RastreabiVerticalPage } from '../pages/rastreabi-vertical/rastreabi-vertical';
 
 @NgModule({
   declarations: [
@@ -78,7 +80,8 @@ import { EditParticipantesRevisaoPage } from '../pages/edit-participantes-revisa
     CriterioPage,EditCriterioPage,EditAceitereqPage,EditAvaliacaoPage,
     CheckListPage,ParticipantesPage,EditCheckListPage,EditParticipantesPage,
     ProdutoTrabalhoPage,EditProdutoTrabalhoPage,EditRevisaoProTraPage,
-    ParticipantesRevisaoPage,EditParticipantesRevisaoPage
+    ParticipantesRevisaoPage,EditParticipantesRevisaoPage,EditRasVerPage,EditRasHoriPage,
+    RastreabiVerticalPage
     
 
   ],
@@ -108,7 +111,9 @@ import { EditParticipantesRevisaoPage } from '../pages/edit-participantes-revisa
     EditAvaliacaoPage,EditCheckListPage,
     CheckListPage,ParticipantesPage,EditParticipantesPage,
     ProdutoTrabalhoPage,EditProdutoTrabalhoPage,EditRevisaoProTraPage,
-    ParticipantesRevisaoPage,EditParticipantesRevisaoPage  
+    ParticipantesRevisaoPage,EditParticipantesRevisaoPage,
+    EditRasVerPage,EditRasHoriPage,RastreabiVerticalPage
+      
   ],
   providers: [
     StatusBar,

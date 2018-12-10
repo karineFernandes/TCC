@@ -61,16 +61,16 @@ export class EditRequisitosPage {
     nomtipreq,codtipreq,nomstreq,codstareq,codpro1,codspr1,idreq,numhorpre,
     codresp,datareq){
   
-      if(this.navParams.get('codreq')){
-      this._http.get('/api/GenericRestService/rest/querytojson/UPDREQUISITO/'
-      +idreq+'&'+codpro+'&'+codspr+'&'+codresp+'&'+codfor+'&'+codstareq+'&'+
-      codtipreq+'&'+desreq+'&'+nomereq+'&'+datareq+'&'+numhorpre+'&'+this.codreq)
-      .subscribe(
-        (req)=>{
-          console.log(req);
-          this.navCtrl.pop();         
-        }
-      );
+    if(this.navParams.get('codreq')){
+    this._http.get('/api/GenericRestService/rest/querytojson/UPDREQUISITO/'
+    +idreq+'&'+codpro+'&'+codspr+'&'+codresp+'&'+codfor+'&'+codstareq+'&'+
+    codtipreq+'&'+desreq+'&'+nomereq+'&'+datareq+'&'+numhorpre+'&'+this.codreq)
+    .subscribe(
+      (req)=>{
+        console.log(req);
+        this.navCtrl.pop();         
+      }
+    );
 
     }else{
       this._http.get('/api/GenericRestService/rest/querytojson/INSREQUISITO/'

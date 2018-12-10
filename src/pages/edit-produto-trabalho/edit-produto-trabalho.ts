@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { HttpClient } from '@angular/common/http';
 import { ProdutoTrabalho } from '../../modelo/ProdutoTrabalho';
+import { RastreabiVerticalPage } from '../rastreabi-vertical/rastreabi-vertical';
 
 @IonicPage()
 @Component({
@@ -59,6 +60,10 @@ excluir(){
       this.navCtrl.pop();         
     }
   );
+}
+
+rastreabiVertical(){
+  this.navCtrl.push(RastreabiVerticalPage,{codProduto:this.codprotra,codigoRequisito:this.codreq});
 }
 
   ionViewDidLoad() {

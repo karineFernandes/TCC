@@ -1,0 +1,31 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Rastreabilidade Vertical</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-list>
+        <ion-thumbnail item-start>
+           <ion-item ion-item *ngFor="let rv of rasVer">           
+              <h2>Codigo Produto Traba.:{{rv.codprotra}}</h2>
+                <p>   
+                  Codigo Relacionamento:{{rv.codprotraderiv}}<br>
+                </p>      
+                <button ion-button clear item-end 
+                (click)="selecionaRastreabi(rv.codprotra,rv.codprotraderiv)">Ver mais</button> 
+            </ion-item>     
+          </ion-thumbnail>  
+        </ion-list>
+        
+        <!--Criacao de botao para add novos requisitos-->
+        <div id ="mais"><button ion-button round color="primary" 
+          (click)="novaRastreabilidade()">
+          <ion-icon name="add"></ion-icon>
+        </button> 
+      </div> 
+</ion-content>

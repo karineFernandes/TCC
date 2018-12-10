@@ -2,18 +2,35 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>GRE3</ion-title>
+    <ion-title>Rastreabilidade Horizontal</ion-title>
   </ion-navbar>
 
 </ion-header>
 
-
 <ion-content padding>
-  <div id ="mais">
-    <button ion-button round color="dark"
-    (click)="PT()">Produto Trab</button>
-    
-   
-  
+    <ion-list>
+      <ion-thumbnail item-start>
+         <ion-item ion-item *ngFor="let rh of rasHor">           
+            <h2>Codigo Requisito:{{rh.codreq}}</h2>
+              <p>   
+                Codigo Relacionamento:{{rh.codrel}}<br>
+              </p>      
+              <button ion-button clear item-end 
+              (click)="selecionaRastreabi(rh.codreq,rh.codrel)">Ver mais</button> 
+          </ion-item>     
+        </ion-thumbnail>  
+      </ion-list>
+      
+      <!--Criacao de botao para add novos requisitos-->
+      <div id ="mais"><button ion-button round color="primary" 
+        (click)="novaRastrabilidade()">
+        <ion-icon name="add"></ion-icon>
+      </button> 
+
+      <button ion-button round color="dark"
+      (click)="PT()">Produto Trab</button>  
     </div>
+
+    
+
 </ion-content>

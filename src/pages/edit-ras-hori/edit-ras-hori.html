@@ -1,0 +1,35 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Editar Rastreabilidade Horizontal</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+        <ion-input type="text" placeholder="Codigo Requisito"
+                    [(ngModel)]="codRequisito" name="codRequisito" value={{codigoReq}}></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-input type="text" placeholder="Codigo Relacionado"
+                    [(ngModel)]="codRela" name="codRela" value={{codigoRel}}></ion-input>
+      </ion-item>
+  </ion-list>
+
+  <div id="mais">   
+    <!--botao para exclusao do item marcado -->
+    <button ion-button round color="danger"(click)= "excluir()">
+      <ion-icon name="trash"></ion-icon>
+    </button>
+    
+    <!--botao para alteraçao do item selecionado -->
+    <button ion-button round color="primary"(click)= "alterar(codRela,codRequisito)">
+      <ion-icon name="checkmark"></ion-icon>
+    </button>  
+  </div>
+</ion-content>

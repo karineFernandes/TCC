@@ -1,0 +1,35 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Editar Rastreabilidade Vertical</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-input type="text" placeholder="Codigo ProTrab"
+                    [(ngModel)]="codProTra" name="codProTra" value={{codprotra}}></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-input type="text" placeholder="Codigo ProTrab Derivado"
+                    [(ngModel)]="codProDeri" name="codProDeri" value={{codproderi}}></ion-input>
+    </ion-item>
+ </ion-list>
+
+  <div id="mais">   
+    <!--botao para exclusao do item marcado -->
+    <button ion-button round color="danger"(click)= "excluir()">
+        <ion-icon name="trash"></ion-icon>
+      </button>
+      
+      <!--botao para alteraçao do item selecionado -->
+    <button ion-button round color="primary"(click)= "alterar(codProTra,codProDeri)">
+      <ion-icon name="checkmark"></ion-icon>
+    </button> 
+  </div>
+</ion-content>
